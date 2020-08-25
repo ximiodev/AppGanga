@@ -1,0 +1,225 @@
+var tipoBus = 0;
+var base = 'http://gangahoteles.com/';
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+function disableFib() {
+    //$( "#lugar2" )[0].autocomplete = isChrome ? 'disabled' :  'nope';
+    //$( "#lugar" ).attr("autocomplete", (isChrome ? 'disabled' :  'nope'));
+}
+
+$(document).ready(function () {
+	$('.ventana.activa').removeClass('activa');
+	$('#pantalla_home').addClass('activa');
+	$('.btnBotonera, .linktopvolver, .linkderecho, .linkcomun, .itemMenuTop').click(function (e) {
+		e.preventDefault();
+		var donde = $(this).attr('data-link');
+		$('.ventana.activa').removeClass('activa');
+		$('#'+donde).addClass('activa');
+	});
+	
+	$('#btnBuscarEstadia, #btnBuscarMicroEstadia').click(function (e) {
+		e.preventDefault();
+		var donde = 'pantalla_resultados';
+		$('.ventana.activa').removeClass('activa');
+		$('#'+donde).addClass('activa');
+	});
+	
+	$('#formEstadia').disableAutoFill();
+	$('#formMicroestadia').disableAutoFill();
+	$('#formEstadia').on('submit', function(e) {
+		$('#formEstadia input').each(function(e) {
+			$(this).attr('name', $(this).attr('id'))
+		});
+	});
+	$('#formMicroestadia').on('submit', function(e) {
+		$('#formMicroestadia input').each(function(e) {
+			$(this).attr('name', $(this).attr('id'))
+		});
+	});
+
+	$('.selectorTipo .selectotrGanga').click(function(e) {
+		e.preventDefault();
+		if(tipoBus==0) {
+			$('.selectotrGanga').addClass('activo');
+			$('#formmicroestadia').removeClass('hidden');
+			$('#formestadia').addClass('hidden');
+			tipoBus = 1;
+		} else {
+			$('.selectotrGanga').removeClass('activo');
+			$('#formestadia').removeClass('hidden');
+			$('#formmicroestadia').addClass('hidden');
+			tipoBus = 0;
+		}
+	});
+
+	$('.selectotrGanga').click(function(e) {
+		e.preventDefault();
+		if(!$(this).hasClass('activo')) {
+			$(this).addClass('activo');
+		} else {
+			$(this).removeClass('activo');
+		}
+	});
+	
+	setInterval(disableFib, 100);
+	
+    $( "#lugar" ).autocomplete({
+		source: base+"ajax/getCities.php",
+		minLength: 2,
+		select: function( event, ui ) {
+			$( "#lugar_v" ).val( ui.item.value );
+		},
+    });
+	
+    $( "#lugar2" ).autocomplete({
+      source: base+"ajax/getCities.php",
+      minLength: 2,
+		select: function( event, ui ) {
+			$( "#lugar_v2" ).val( ui.item.value );
+		},
+    });
+    
+    
+	$('#llegada').daterangepicker({
+		singleDatePicker: true,
+		autoUpdateInput : false,
+		singleClasses: "picker_3",
+		timePicker: false,
+		locale: {
+			format: 'YYYY-MM-DD'
+		}
+	}, function(chosen_date) {
+		$('#llegada').val(chosen_date.format('YYYY-MM-DD'));
+	});
+	
+    
+    
+	$('#salida').daterangepicker({
+		singleDatePicker: true,
+		autoUpdateInput : false,
+		singleClasses: "picker_3",
+		timePicker: false,
+		locale: {
+			format: 'YYYY-MM-DD'
+		}
+	}, function(chosen_date) {
+		$('#salida').val(chosen_date.format('YYYY-MM-DD'));
+	});
+    
+    
+	$('#llegada2').daterangepicker({
+		singleDatePicker: true,
+		autoUpdateInput : false,
+		singleClasses: "picker_3",
+		timePicker: true,
+		locale: {
+			format: 'YYYY-MM-DD'
+		}
+	}, function(chosen_date) {
+		$('#llegada2').val(chosen_date.format('YYYY-MM-DD'));
+	});
+    
+	$('#nuevalarma').daterangepicker({
+		singleDatePicker: true,
+		autoUpdateInput : false,
+		singleClasses: "picker_3",
+		timePicker: true,
+		locale: {
+			format: 'YYYY-MM-DD'
+		}
+	}, function(chosen_date) {
+		$('#nuevalarma').val(chosen_date.format('YYYY-MM-DD'));
+	});
+	
+	//~ $('input[type=radio][name=selectedRoom]').change(function() {
+		//~ $('.cajainfoHabit').removeClass('activaHab');
+		//~ console.log("DSDDS");
+		//~ $(this).closest('.cajainfoHabit').addClass('activaHab');
+		//~ var datos = {
+			//~ camas: $(this).closest('.cajainfoHabit').data('camas'),
+			//~ precio: $(this).closest('.cajainfoHabit').data('precio')
+		//~ };
+		
+		//~ $('input[type=checkbox][name=extraHotelData]').attr('checked', false);
+	//~ });
+	
+	$('.selectorGanga').on('click', function(e){
+		e.preventDefault();
+		$('.carrHabitaciones .item').removeClass('activo');
+		$('.cajainfoHabit').removeClass('activaHab');
+		$(this).closest('.cajainfoHabit').addClass('activaHab');
+		$(this).closest('.item').addClass('activo');
+		var datos = {
+			camas: $(this).closest('.cajainfoHabit').data('camas'),
+			precio: $(this).closest('.cajainfoHabit').data('precio')
+		};
+		
+		$('input[type=checkbox][name=selectedRoom]').attr('checked', false);
+		$(this).find('input').attr('checked', true);
+		console.log($(this).find('input').attr('id'))
+	  });
+	 
+	
+	
+	$('.carrHoteles').owlCarousel({
+		loop:true,
+		margin:10,
+		navText: ['<i class="fa fa-chevron-left" >','<i class="fa fa-chevron-right">'],
+		responsiveClass:true,
+		responsive:{
+			0:{
+				items:1,
+				nav:true
+			},
+			600:{
+				items:2,
+				nav:false
+			},
+			1000:{
+				items:4,
+				nav:true
+			}
+		}
+	})
+	
+	$('.carrHabitaciones').owlCarousel({
+		loop:true,
+		margin:10,
+		navText: ['<i class="fa fa-chevron-left" >','<i class="fa fa-chevron-right">'],
+		responsiveClass:true,
+		responsive:{
+			0:{
+				items:1,
+				nav:true
+			},
+			600:{
+				items:2,
+				nav:false
+			},
+			1000:{
+				items:4,
+				nav:true
+			}
+		}
+	})
+	
+	$('.carrCiudades').owlCarousel({
+		loop:true,
+		margin:10,
+		navText: ['<i class="fa fa-chevron-left" >','<i class="fa fa-chevron-right">'],
+		responsiveClass:true,
+		responsive:{
+			0:{
+				items:1,
+				nav:true
+			},
+			600:{
+				items:2,
+				nav:false
+			},
+			1000:{
+				items:4,
+				nav:true
+			}
+		}
+	})
+});

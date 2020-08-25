@@ -1,0 +1,1379 @@
+@font-face {
+    font-family: 'Lato-Semibold';
+    src: url('../fonts/Lato-Semibold.eot');
+    src: url('../fonts/Lato-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lato-Semibold.woff2') format('woff2'),
+        url('../fonts/Lato-Semibold.woff') format('woff'),
+        url('../fonts/Lato-Semibold.ttf') format('truetype'),
+        url('../fonts/Lato-Semibold.svg#Lato-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NHL Montreal';
+    src: url('../fonts/NHLMontreal.eot');
+    src: url('../fonts/NHLMontreal.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NHLMontreal.woff2') format('woff2'),
+        url('../fonts/NHLMontreal.woff') format('woff'),
+        url('../fonts/NHLMontreal.ttf') format('truetype'),
+        url('../fonts/NHLMontreal.svg#NHLMontreal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular Std Book';
+    src: url('../fonts/CircularStd-Book.eot');
+    src: url('../fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CircularStd-Book.woff2') format('woff2'),
+        url('../fonts/CircularStd-Book.woff') format('woff'),
+        url('../fonts/CircularStd-Book.ttf') format('truetype'),
+        url('../fonts/CircularStd-Book.svg#CircularStd-Book') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('../fonts/CircularStd-Bold.eot');
+    src: url('../fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CircularStd-Bold.woff2') format('woff2'),
+        url('../fonts/CircularStd-Bold.woff') format('woff'),
+        url('../fonts/CircularStd-Bold.ttf') format('truetype'),
+        url('../fonts/CircularStd-Bold.svg#CircularStd-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer,
+header, hgroup, main, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'Lato-Semibold';
+    background: #F7F7F7;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+
+sup {
+    top:0px!important ;
+}
+.cajanombre  {
+	text-align:justify!important;
+}
+
+footer {
+	min-height: 190px;
+	background: #e94d4d;
+	color: #FFF;
+}
+
+header.row,interna {
+	padding: 15px 0;
+	background: #e94d4d;
+	color: #FFF;
+}
+
+header.home {
+	background: #E94D4D;
+	padding: 10px 0;
+}
+
+.logoTopInt {
+	height: 30px;
+}
+
+.menuButton {
+	display: inline-block;
+	margin: -3px 10px!important
+}
+
+.bar1, .bar2, .bar3 {
+	width: 18px;
+	height: 2px;
+	background-color: #FFF;
+	margin: 3px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.linkscontmenu {
+	color: #FFF;
+	text-align: right;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.linkscontmenu a {
+	color: #FFF;
+	margin: 0 10px;
+}
+
+a.loginButton {
+    font-size: 18px;
+    color: #ffd200;
+    padding-left: 30px;
+    background: url(../images/iconLlaves.png) no-repeat left center;
+    background-size: contain;
+}
+
+a.travelButton {
+    font-size: 18px;
+    color: #ffd200;
+    padding-left: 30px;
+    background: url(../images/iconTravel.png) no-repeat left center;
+    background-size: contain;
+}
+
+a.favButton {
+    font-size: 18px;
+    padding-left: 30px;
+    background: url(../images/iconFav.png) no-repeat left center;
+    background-size: contain;
+}
+
+a.SearchButton {
+    font-size: 18px;
+}
+
+a.alarmButton {
+    font-size: 18px;
+    padding-left: 23px;
+    background: url(../images/iconAlarm.png) no-repeat left center;
+    background-size: contain;
+    margin: 0 5px;
+}
+
+span.separador {
+    font-size: 20px;
+}
+
+.titularHome {
+    font-family: 'NHL Montreal';
+    font-size: 45px;
+    line-height: 52px;
+	color: #FFF;
+	margin: 30px auto 5px;
+}
+
+.bajadaHeadHome {
+    font-family: 'Circular Std Book';
+    font-size: 18px;
+    line-height: 22px;
+	color: #FFF;
+	margin: 5px auto 15px;
+}
+
+.formHomeBus {
+    padding: 15px;
+    margin: 0 -15px;
+    border-radius: 5px;
+    background: rgba(255,255,255,.2);
+}
+
+.formHomeBus::after {
+	clear: both;
+	display: block;
+	content: ' ';
+}
+
+.form-ganga {
+    border: 0;
+    border-bottom: 2px solid #e94d4d;
+    font-size: 16px;
+    line-height: 26px;
+    height: 35px;
+    color: #000304;
+/*
+    width: calc(33.33333333% - 33px);
+*/
+}
+
+.form-ganga.col-md-2 {
+	width: 16%;
+	margin-left: 0.6666%;
+}
+
+.btn-ganga-red, a.btn-ganga-red, button.btn-ganga-red {
+    background: #e94d4d;
+    color: #FFF;
+    border: 0;
+    font-family: 'Circular Std Book';
+	line-height: 28px;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 5px 15px;
+}
+
+.btn-ganga-red.rounded {
+	border-radius: 20px;
+}
+
+.btn-ganga-red.col-md-2 {
+    background: #e94d4d;
+    color: #FFF;
+    border: 0;
+    line-height: 28px;
+    width: 16%;
+    margin-left: .6666%;
+    height: 35px;
+}
+
+div.form-ganga.col-md-2 select.slectorBus {
+	width: 48%;
+	border: 0;
+	padding-left: 35px;
+	height: 30px;
+}
+
+div.form-ganga.col-md-2 {
+    padding: 1px 0;
+    background: #FFF;
+}
+
+.iconMapa {
+    padding-left: 35px;
+    background-image: url(../images/iconMapa.png);
+    background-repeat: no-repeat;
+    background-position: 2px center;
+    background-size: 26px;
+}
+
+.iconCalendar {
+    padding-left: 35px;
+    background-image: url(../images/iconCalendar.png);
+    background-repeat: no-repeat;
+    background-position: 2px center;
+    background-size: 26px;
+}
+
+.iconClock {
+    padding-left: 35px;
+    background-image: url(../images/iconClock.png);
+    background-repeat: no-repeat;
+    background-position: 2px center;
+    background-size: 26px;
+}
+
+.iconBed {
+    padding-left: 35px;
+    background-image: url(../images/iconBed.png);
+    background-repeat: no-repeat;
+	background-position: 3px center;
+    background-size: 30px;
+}
+
+.iconPax {
+    padding-left: 35px;
+    background-image: url(../images/iconPax.png);
+    background-repeat: no-repeat;
+    background-position: 3px center;
+    background-size: 30px;
+}
+
+.selectorTipo {
+    font-size: 18px;
+    color: #FFF;
+    font-family: 'Circular Std';
+    margin: 15px 0;
+}
+
+.selectorTipo.dark {
+    color: #000;
+}
+
+.selectotrGanga {
+    display: inline-block;
+    width: 60px;
+    border-radius: 15px;
+    background: #FFF;
+    height: 26px;
+    margin: 3px 3px -5px;
+}
+
+.selectotrGanga::after {
+    content: ' ';
+    position: relative;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #e94d4d;
+    display: block;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.selectotrGanga.activo::after {
+    margin: 2px;
+    float: right;
+}
+
+.fondoBlanco {
+	background: #FFF;
+}
+
+.boxCaliTitu {
+    font-family: 'Circular Std';
+    font-size: 18px;
+    color: #000304;
+    margin-bottom: 10px;
+}
+
+.boxCaliDesc {
+    font-family: 'Circular Std Book';
+    font-size: 14px;
+    color: #7f7f7f;
+}
+
+.boxCalidadHome {
+	margin: 30px 0px 30px -15px;
+    padding: 15px 0;
+    min-height: 100px;
+	display: table;
+}
+
+.tipocelda {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.iconBigCalidad {
+    padding-left: 90px;
+    background: url(../images/iconBigCalidad.png) no-repeat 2px center;
+    background-size: 80px;
+}
+
+.iconConfortable {
+    padding-left: 90px;
+    background: url(../images/iconConfortable.png) no-repeat 2px center;
+    background-size: 80px;
+}
+
+.iconLowCost {
+    padding-left: 90px;
+    background: url(../images/iconLowCost.png) no-repeat 2px center;
+    background-size: 80px;
+}
+
+.iconBigFlexibilidad {
+    padding-left: 90px;
+    background: url(../images/iconBigFlexibilidad.png) no-repeat 2px center;
+    background-size: 80px;
+}
+
+.iconFlexibilidad {
+    padding-left: 90px;
+    background: url(../images/iconFlexibilidad.png) no-repeat 2px center;
+    background-size: 80px;
+}
+
+.iconAlcance {
+    padding-left: 90px;
+    background: url(../images/iconAlcance.png) no-repeat 2px center;
+    background-size: 80px;
+}
+
+.iconBigPrecio {
+    padding-left: 90px;
+    background: url(../images/iconBigPrecio.png) no-repeat 2px center;
+    background-size: 80px;
+}
+
+.tutuloSecHome {
+    font-family: 'Circular Std';
+    font-size: 20px;
+    color: #000304;
+    margin-bottom: 5px;
+}
+
+.textoSecHome {
+    font-family: 'Circular Std Book';
+    font-size: 14px;
+    color: #7f7f7f;
+}
+
+.tutuloSecHomeNat {
+    font-family: 'Lato';
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.textoSecHomeNat {
+    font-family: 'Lato';
+    font-size: 14	px;
+    color: #E94D4D;
+}
+
+.btnVertodoRi2 {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 10px;
+    top: 20px;
+    position: absolute;
+    right: 0;
+}
+
+.btnVertodoRi {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 10px;
+    top: 15px;
+    position: absolute;
+    right: 0;
+}
+
+.cajasitio {
+	position: relative;
+	padding: 25px 15px;
+}
+
+.boxOferta {
+	overflow: hidden;
+	border-radius: 10px;
+	display: block;
+	margin-top: 25px;
+}
+
+.boxOferta img {
+	width: 100%;
+}
+
+a.tagPil {
+    display: inline-block;
+    padding: 10px;
+    margin: 20px 5px 20px 0;
+    border: 1px solid #707070;
+    border-radius: 16px;
+    font-family: 'Circular Std Book';
+    color: #707070;
+	font-size: 12px;
+}
+
+.fotoHotelCar {
+	overflow: hidden;
+	height: 180px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+	display: block;
+	margin-top: 25px;
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+.htHomeLoc {
+    color: #000304;
+    font-size: 16px;
+    font-family: 'Circular Std';
+    margin: 10px auto;
+    padding-left: 20px;
+    background: url(../images/iconMapa.png) no-repeat left center;
+    background-size: 18px;
+}
+
+.htHomeTit {
+    color: #000304;
+    font-size: 24px;
+    font-family: 'Circular Std';
+    margin: 10px auto;
+}
+
+.htHomeDesc {
+    font-family: 'Circular Std Book';
+    color: #7f7f7f;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.htHomePrec {
+    color: #000304;
+    font-size: 16px;
+    font-family: 'Circular Std';
+    margin: 10px auto;
+}
+
+.carrHoteles .owl-nav {
+	z-index: 99999;
+}
+
+.carrHoteles .owl-nav button.owl-prev {
+	left: -15px;
+	color: #EB5251;
+}
+
+.carrHoteles .owl-nav button.owl-next {
+	right: -15px;
+	color: #EB5251;
+}
+
+.carrHoteles .owl-nav button {
+    font-family: 'Circular Std Book';
+    position: absolute;
+    top: 140px;
+    background: #FFF!important;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #b1b1b1!important;
+    border-radius: 50%;
+    font-size: 19px!important;
+    line-height: 30px!important;
+}
+
+.tipoTabla {
+	display: table;
+	width: 100%;
+	height: 300px;
+}
+
+.tipoTabla2 {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.tipoTablaCel {
+	width: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.fondoExperiencias {
+    background: no-repeat center center url(../images/expeFnd.jpg);
+    background-size: cover;
+    padding: 40px 0;
+    min-height: 350px;
+}
+
+.copyExper {
+	width: 100%;
+	max-width: 440px;
+    color: #FFF;
+    font-size: 16px;
+    font-family: 'Lato';
+    text-align: center;
+    margin: 10px auto;
+}
+
+.titExper {
+	width: 100%;
+    font-family: 'NHL Montreal';
+    color: #FFF;
+    font-size: 60px;
+    text-align: center;
+    margin: 30px auto 15px;
+}
+
+.butExp {
+	width: 100%;
+    text-align: center;
+    padding: 0px;
+}
+
+.contarj {
+    border: 1px solid #BFBFBF;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 10px;
+    margin: 15px auto;
+    text-align: left;
+}
+
+.boxTarj {
+    font-family: 'Circular Std Book';
+    display: inline-block;
+    margin: 0 ;
+    font-size: 12px;
+    color: #7f7f7f;
+    text-align: center;
+}
+
+.boxTarj img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.carrCiudades .owl-nav {
+	z-index: 99999;
+}
+
+.carrCiudades .owl-nav button.owl-prev {
+	left: -15px;
+}
+
+.carrCiudades .owl-nav button.owl-next {
+	right: -15px;
+}
+
+.carrCiudades .owl-nav button {
+    font-family: 'Circular Std Book';
+    position: absolute;
+    top: 150px;
+    background: #FFF!important;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #b1b1b1!important;
+    border-radius: 50%;
+    font-size: 19px!important;
+    line-height: 30px!important;
+}
+
+.fotoCiudCar {
+	overflow: hidden;
+	height: 260px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+	margin-top: 25px;
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+.nombreCiudadH {
+    font-family: 'NHL Montreal';
+    color: #FFF;
+    font-size: 65px;
+    text-align: center;
+}
+
+.fondoSomos {
+    background: no-repeat center center url(../images/fondoSomos.jpg);
+    background-size: cover;
+    padding: 60px 0;
+    min-height: 350px;
+}
+
+.iconSomos{
+    background: no-repeat center top;
+    padding-top: 50px;
+    font-family: 'NHL Montreal';
+    width: 10%;
+    display: inline-block;
+    color: #FFF;
+}
+
+.iconAereos {
+    background-image: url(../images/iconAereos.png);
+}
+
+.iconBus {
+    background-image: url(../images/iconBus.png);
+}
+
+.iconHotel {
+    background-image: url(../images/iconHotel.png);
+}
+
+.iconRentAcar {
+    background-image: url(../images/iconRentAcar.png);
+}
+
+.iconTranslado {
+    background-image: url(../images/iconTranslado.png);
+}
+
+img.imgLogoSomos {
+    display: block;
+    margin: 0 auto;
+}
+
+img.imgLogoClub {
+    display: block;
+    margin: 0 auto;
+}
+
+.titClub .redT {
+	color: #e94d4d;
+}
+
+.rowClubGan {
+	padding: 40px 0;
+}
+
+.titClub {
+    font-family: 'NHL Montreal';
+    color: #000;
+    font-size: 72px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.subClub {
+    font-family: 'Circular Std';
+    color: #000304;
+    font-size: 34px;
+    text-align: center;
+    margin: 0px auto 35px;
+    letter-spacing: 4px;
+}
+
+.fondoGangaApp {
+    background: no-repeat center center url(../images/fondoGangaApp.jpg);
+    background-size: cover;
+    padding: 60px 0;
+    min-height: 350px;
+}
+
+.copyGangaApp {
+	width: 100%;
+    color: #FFF;
+    font-size: 36px;
+    font-family: 'Circular Std';
+    text-align: center;
+    margin: 40px auto 20px;
+}
+
+.copyGangaApp2 {
+	width: 100%;
+    color: #FFF;
+    font-size: 24px;
+    font-family: 'Circular Std Book';
+    text-align: center;
+    margin: 20px auto 40px;
+}
+
+.listadoItems {
+	color: #000304;
+    font-size: 16px;
+    font-family: 'Circular Std Book';
+    padding: 80px 0;
+}
+
+.titColumna {
+    font-size: 24px;
+    font-family: 'Circular Std';
+    padding-bottom: 16px;
+}
+
+.listadoItems li a {
+    color: #000304;
+}
+
+.listadoItems li{
+    padding-bottom: 8px;
+}
+
+span.copyriBot {
+    font-family: 'Lato';
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+}
+
+img.logoBotom {
+    width: 240px;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+
+.redesCont {
+    text-align: right;
+    color: #FFF;
+}
+
+.redesCont a {
+    color: #FFF!important;
+    margin: 0 10px;
+    line-height: 80px;
+}
+
+.error404T {
+	font-size: 50px;
+    font-family: 'Circular Std';
+    color: #000304;
+    padding-bottom: 26px;
+    padding-top: 26px;
+}
+
+.error404S {
+	font-size: 16px;
+    font-family: 'Circular Std Book';
+    color: #000304;
+    padding-bottom: 80px;
+}
+
+.titGenerico {
+	font-size: 30px;
+    font-family: 'Circular Std';
+    color: #000304;
+    padding-bottom: 26px;
+    padding-top: 26px;
+}
+
+.txtGenerico {
+	font-size: 16px;
+    font-family: 'Circular Std Book';
+    color: #000304;
+    padding-bottom: 80px;
+}
+
+.mapaBusquedaLat {
+	width: 100%;
+	height: 380px;
+}
+
+.roundButton {
+	border-radius: 20px;
+}
+
+.btnBorrarFil {
+	font-size: 12px!important;
+	display: block;
+    margin: 15px 0;
+}
+
+.boxFiltros {
+}
+
+.filtrosCont {
+    padding: 18px 0;
+    width: 83.33333333%;
+    float: left;
+	position: relative;
+}
+
+.pilFiltro {
+	font-size: 12px;
+    font-family: 'Circular Std Book';
+	display: inline-block;
+	margin-right: 10px;
+	padding: 8px 15px;
+	border: 1px solid #cccccc;
+	color: #010101!important;
+	background: #FFF;
+	border-radius: 20px;
+}
+
+.pilMasFiltros {
+	font-size: 12px;
+    font-family: 'Circular Std Book';
+	display: inline-block;
+	margin-right: 10px;
+	padding: 8px 15px;
+	border: 1px solid #cccccc;
+	color: #e94d4d!important;
+	background: #FFF;
+	border-radius: 20px;
+}
+
+.mensajeResultados {
+	font-size: 15px;
+    font-family: 'Circular Std Book';
+	color: #000;
+	padding: 10px 0;
+}
+
+.colorTRojo {
+	color: #e94d4d!important;
+}
+
+.ordenpag {
+    padding: 30px 0 20px;
+    display: inline-block;
+}
+
+.totRes {
+    font-family: 'Circular Std Book';
+    color: #7f7f7f;
+    font-size: 16px;
+}
+
+.boxBtnOrdenar {
+    float: right;
+    display: inline-block;
+    padding: 20px 0 15px;
+}
+
+.btnOrdenarBus {
+    background: none!important;
+    border: 0!important;
+    box-shadow: none!important;
+    font-family: 'Circular Std Book'!important;
+    color: #7f7f7f!important;
+    font-size: 16px!important;
+}
+
+.contenidoBoxClub {
+    padding-left: 50%;
+    text-align: center;
+}
+
+.boxClubGangaHome {
+    background: #fed430 no-repeat left center url(../images/fndBoxClubGanga.jpg);
+    background-size: cover;
+    padding: 15px;
+    min-height: 230px;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+
+.tituloBoxGan {
+    color: #E84D4D;
+    font-family: 'Lato-Semibold';
+    font-size: 40px;
+    margin: 0 0 5px;
+}
+
+.descBoxGan {
+    color: #E84D4D;
+    font-family: 'Lato-Semibold';
+    font-size: 25px;
+    line-height: 25px;
+    margin: 15px 0;
+}
+
+.legalBoxGan {
+    color: #E84D4D;
+    font-family: 'Lato-Semibold';
+    font-size: 12px;
+    line-height: 14px;
+    margin: 15px 0 0;
+}
+
+a.btnVerProg {
+    color: #E84D4D;
+    font-family: 'Lato-Semibold';
+    font-size: 14px;
+    line-height: 16px;
+    display: block;
+    border: 1px solid #E84D4D;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 14px;
+    padding: 5px 15px;
+}
+
+.boxOfertonHome {
+    background: #E84D4D;
+    padding: 0 0;
+    border-radius: 8px;
+    min-height: 270px;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.logomasterHoriz {
+	background: no-repeat left center url(../images/logomasterHoriz.png);
+    background-size: contain;
+    height: 40px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.cuotasamarillo {
+	background: no-repeat center center url(../images/6cuotasamarillo.png);
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.boxcondiOferHome {
+    width: 100%;
+    color: #FFF;
+}
+
+.textoLeOferHome {
+    width: 110px;
+    float: left;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+a.btnLeOferHome {
+    display: block;
+    float: right;
+    font-size: 14px;
+    color: #FFF!important;
+    border: 1px solid #FFF;
+    padding: 8px 10px;
+    border-radius: 15px;
+}
+
+div#slideofertasminihome {
+    margin: 0 -15px;
+}
+
+.itemcarruhomepromo {
+    height: 230px;
+    width: 100%;
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+
+.fndMuchomas {
+	overflow: hidden;
+	height: 220px;
+    border-radius: 10px;
+	margin-top: 25px;
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+.fndPasajes {
+    background-image: url(../images/fndPasajes.jpg);
+}
+
+.fndExperiencias {
+    background-image: url(../images/fndExperienciasH.jpg);
+}
+
+.fndTraslados {
+    background-image: url(../images/fndTraslados.jpg);
+}
+
+.fndRentalCar {
+    background-image: url(../images/fndRentalCar.jpg);
+}
+
+.titMuchamas {
+    font-family: 'Lato-Semibold';
+    font-size: 22px;
+    color: #000000!important;
+    padding-left: 35px;
+    background: no-repeat left center;
+    background-size: contain;
+    margin-top: 10px;
+}
+
+.iconPasajesHS {
+    background-image: url(../images/iconPasajesHS.png);
+}
+
+.iconExperienciasHS {
+    background-image: url(../images/iconExperienciasHS.png);
+}
+
+.iconTrasladosHS {
+    background-image: url(../images/iconTrasladosHS.png);
+}
+
+.iconRentalCarHS {
+    background-image: url(../images/iconRentalCarHS.png);
+}
+
+.txtMuchamas {
+    font-family: 'Lato';
+    background-size: contain;
+    font-size: 16px;
+    color: #606060!important;
+    margin-top: 10px;
+}
+
+.top0 {
+	top: 0;
+}
+
+.bannerGangaApp {
+    background: no-repeat center center #fe7223 url(../images/bannerGangaApp.jpg);
+    min-height: 360px;
+    border-radius: 10px;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.titBannerApp {
+    font-family: 'Lato-Semibold';
+    font-size: 40px;
+    color: #FFF!important;
+    margin-bottom: 15px;
+}
+
+.txtBannerApp {
+    font-family: 'Lato';
+    font-size: 24px;
+    color: #FFF!important;
+    margin-bottom: 25px;
+}
+
+.fndFormOfertas{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background: #FFD207;
+}
+
+.iconSobre {
+    background: no-repeat left center url(../images/iconSobre.png);
+    background-size: contain;
+    color: #313131;
+    font-size: 10px;
+    padding-left: 25px;
+    margin-top: 3px;
+}
+
+.txtrojoOfer {
+    color: #E94D4D;
+    font-size: 14px;
+    line-height: 25px;
+    font-family: 'Lato';
+}
+
+#emailofertas {
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 210px;
+	margin: 15px auto;
+}
+
+.btnEnviarEmailOfertas {
+    background: #EB5251;
+    border: 0;
+    font-size: 12px;
+    font-family: 'Lato';
+    padding: 7px 15px;
+    color: #FFF;
+    border-radius: 15px;
+}
+
+.btnFoooterPreAccesos {
+    border: 1px solid #EB5251;
+    border-radius: 15px;
+    padding: 7px 15px;
+    color: #EB5251;
+    margin: 15px 10px 30px;
+    display: inline-block;
+	font-size: 12px;
+}
+
+.textoFooter {
+	color: #FFF;
+    font-size: 16px;
+    font-family: 'Lato';
+    line-height: 22px;
+}
+
+.linksFooter {
+    padding: 30px 0;
+    line-height: 22px;
+}
+
+.linksFooter a {
+	color: #FFF;
+    font-size: 18px;
+    font-family: 'Lato';
+    display: block;
+}
+
+.cajaHotelResultados {
+    min-height: 260px;
+}
+
+.thumbHotelResultados {
+    width: 100%;
+    min-height: 150px;
+    background: no-repeat center center;
+    background-size: cover;
+    border-radius: 8px;
+    position: relative;
+}
+
+.cintaoferta {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    padding: 5px;
+    background: red;
+    border-radius: 0 10px 10px 0;
+    color: #FFF;
+    font-size: 11px;
+    font-family: 'Lato';
+}
+
+a.iconLike {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    color: #FFF;
+}
+
+.geoHotelResultados {
+    font-size: 13px;
+    font-family: 'Lato';
+    color: #000;
+    padding-left: 16px;
+    margin-bottom: 10px;
+    background: no-repeat top left url(../images/pinMap.png);
+    background-size: 11px;
+    line-height: 16px;
+    margin-top: 6px;
+}
+
+.nombreHotelResultados {
+    font-size: 22px;
+    font-family: 'Lato';
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.descHotelResultados {
+    font-size: 14px;
+    font-family: 'Lato';
+    margin-bottom: 10px;
+    color: #606060;
+}
+
+.ratingsHotelResultados .fa.fa-star {
+	color: #D9D9D9;
+}
+
+.precioHotelResultados {
+    font-size: 22px;
+    font-family: 'Lato';
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.ratingsHotelResultados {
+    font-size: 13px;
+    color: #000;
+}
+
+.ratingsHotelResultados .fa.fa-star.goldstar {
+	color: #FFE622;
+}
+
+.hotelExtraIcon {
+    background: no-repeat center center;
+    background-size: contain;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    margin: 10px 10px 10px 0;
+}
+
+.iconHotelC_1 {
+	background-image: url(../images/iconHotelC_1.png);
+}
+
+.iconHotelC_2 {
+	background-image: url(../images/iconHotelC_2.png);
+}
+
+.iconHotelC_3 {
+	background-image: url(../images/iconHotelC_3.png);
+}
+
+.iconHotelC_4 {
+	background-image: url(../images/iconHotelC_4.png);
+}
+
+.boxLegalHotelResultados {
+    font-family: 'Lato';
+    font-size: 12px;
+    color: #707070;
+}
+
+.boxLegalHotelResultados a{
+    color: #E94D4D!important;
+}
+
+a.btnMasHotelResultados {
+    position: relative;
+    /* bottom: 0; */
+    /* right: 0; */
+    padding: 10px 25px;
+    color: #FFF!important;
+    text-decoration: none;
+    background: #E94D4D;
+    border-radius: 25px;
+    display: block;
+    width: fit-content;
+    margin: 5px auto;
+}
+
+.resultadosToolsBox {
+/*
+    overflow: hidden;
+*/
+}
+
+.qPHBlock {
+    margin: 25px -15px;
+}
+
+.imagenqPHBlock {
+    width: 100%;
+    height: 200px;
+    background: no-repeat center center;
+    background-size: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tituloqPHBlock {
+    font-size: 17px;
+    font-family: 'Lato';
+    margin-bottom: 25px;
+}
+
+
+.menuflotante {
+	position: fixed;
+	right: -100vw;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+}
+
+a.linklogotop img {
+    height: 30px;
+}
+
+
+.bannerHome {
+	background: url(../images/fondoHeaderHome.jpg) center center no-repeat;
+	background-size: cover;
+	padding: 30px 0;
+}
+
+
+.bloqueHotelResultados {
+    padding-top: 20px;
+}

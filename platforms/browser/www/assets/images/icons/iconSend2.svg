@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.473" height="18.098" viewBox="0 0 22.473 18.098">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="Interface-Essential_Select_cursor-1" data-name="Interface-Essential / Select / cursor-1" transform="translate(-252.028 -6605.982)">
+    <g id="Group_636" data-name="Group 636" transform="translate(252.809 6606.754)">
+      <g id="cursor-1" transform="translate(-252.809 -6606.754)">
+        <path id="Shape_2726" data-name="Shape 2726" class="cls-1" d="M273.275,6614.33l-19.446-7.526a.75.75,0,0,0-.918,1.078l3.729,6.393a1.5,1.5,0,0,1,0,1.512l-3.729,6.394a.75.75,0,0,0,.917,1.078l19.443-7.53a.75.75,0,0,0,0-1.4Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

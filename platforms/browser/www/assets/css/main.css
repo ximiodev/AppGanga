@@ -1,0 +1,2785 @@
+@font-face {
+    font-family: 'Lato-Semibold';
+    src: url('../fonts/Lato-Semibold.eot');
+    src: url('../fonts/Lato-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lato-Semibold.woff2') format('woff2'),
+        url('../fonts/Lato-Semibold.woff') format('woff'),
+        url('../fonts/Lato-Semibold.ttf') format('truetype'),
+        url('../fonts/Lato-Semibold.svg#Lato-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NHL Montreal';
+    src: url('../fonts/NHLMontreal.eot');
+    src: url('../fonts/NHLMontreal.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NHLMontreal.woff2') format('woff2'),
+        url('../fonts/NHLMontreal.woff') format('woff'),
+        url('../fonts/NHLMontreal.ttf') format('truetype'),
+        url('../fonts/NHLMontreal.svg#NHLMontreal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular Std Book';
+    src: url('../fonts/CircularStd-Book.eot');
+    src: url('../fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CircularStd-Book.woff2') format('woff2'),
+        url('../fonts/CircularStd-Book.woff') format('woff'),
+        url('../fonts/CircularStd-Book.ttf') format('truetype'),
+        url('../fonts/CircularStd-Book.svg#CircularStd-Book') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url('../fonts/CircularStd-Bold.eot');
+    src: url('../fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CircularStd-Bold.woff2') format('woff2'),
+        url('../fonts/CircularStd-Bold.woff') format('woff'),
+        url('../fonts/CircularStd-Bold.ttf') format('truetype'),
+        url('../fonts/CircularStd-Bold.svg#CircularStd-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer,
+header, hgroup, main, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'Lato-Semibold';
+    background: #F7F7F7;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+
+sup {
+    top:0px!important ;
+}
+
+.generalcont {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.ventana {
+    position: absolute;
+    right: -100vw;
+    top: 0;
+    transition: all 1s;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+	background: #f5f6f8;
+}
+
+.ventana.activa {
+    right: 0;
+    z-index: 99999;
+}
+
+.daterangepicker.dropdown-menu {
+    z-index: 999999;
+}
+
+.cajanombre  {
+	text-align:justify!important;
+}
+
+footer {
+	min-height: 190px;
+	background: #e94d4d;
+	color: #FFF;
+}
+
+header.interna {
+	padding: 15px 0;
+	background: #e94d4d;
+	color: #FFF;
+}
+
+#pantalla_home header.home {
+	position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+header.home {
+	background: #E94D4D;
+	padding: 10px 0 0;
+}
+
+.similboxbuscar {
+    background: #f5f6f8;
+    display: block;
+    position: relative;
+    height: auto;
+    padding: 10px;
+    float: left;
+    width: 100%;
+}
+
+.likeaninput {
+    margin: 5px auto;
+    border: 1px solid #999;
+    padding: 10px;
+    border-radius: 8px;
+    background: #FFF;
+}
+
+.iconobuscarred {
+    background: #e94d4d;
+    margin: 5px auto;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50px;
+    color: #FFF;
+    font-size: 16px;
+}
+
+.sinpad {
+	padding: 0!important;
+}
+
+.barramenured {
+    padding-bottom: 10px;
+}
+
+.logoTopInt {
+	height: 30px;
+}
+
+.menuButton {
+	display: inline-block;
+	margin: -3px 10px!important
+}
+
+.bar1, .bar2, .bar3 {
+	width: 18px;
+	height: 2px;
+	background-color: #FFF;
+	margin: 3px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.linkscontmenu {
+	color: #FFF;
+	text-align: right;
+    font-size: 18px;
+    line-height: 22px;
+	padding-top: 3px;
+}
+
+.linkscontmenu a {
+	color: #FFF;
+	margin: 0 5px;
+	text-decoration: none!important;
+}
+
+a.loginButton {
+    font-size: 18px;
+    color: #ffd200;
+    padding-left: 30px;
+    background: url(../images/iconLlaves.png) no-repeat left center;
+    background-size: contain;
+}
+
+a.travelButton {
+    font-size: 18px;
+    color: #ffd200;
+    padding-left: 30px;
+    background: url(../images/iconTravel.png) no-repeat left center;
+    background-size: contain;
+}
+
+a.favButton {
+    font-size: 18px;
+    padding-left: 30px;
+    background: url(../images/iconFav.png) no-repeat left center;
+    background-size: contain;
+}
+
+a.SearchButton {
+    font-size: 18px;
+}
+
+a.alarmButton {
+    font-size: 18px;
+    padding-left: 23px;
+    background: url(../images/iconAlarm.png) no-repeat left center;
+    background-size: contain;
+    margin: 0 5px;
+}
+
+span.separador {
+    font-size: 20px;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+}
+
+.titularHome {
+    font-family: 'NHL Montreal';
+    font-size: 45px;
+    line-height: 52px;
+	color: #FFF;
+	margin: 30px auto 5px;
+}
+
+.bajadaHeadHome {
+    font-family: 'Circular Std Book';
+    font-size: 18px;
+    line-height: 22px;
+	color: #FFF;
+	margin: 5px auto 15px;
+}
+
+.formHomeBus {
+    padding: 15px;
+    margin: 0 -15px;
+    border-radius: 5px;
+    background: rgba(255,255,255,.2);
+}
+
+.formHomeBus::after {
+	clear: both;
+	display: block;
+	content: ' ';
+}
+
+.form-ganga {
+    border: 0;
+    border-bottom: 2px solid #e94d4d;
+    font-size: 16px;
+    line-height: 26px;
+    height: 35px;
+    color: #000304;
+    width: 100%;
+}
+
+.form-ganga.col-md-2 {
+	width: 16%;
+	margin-left: 0.6666%;
+}
+
+.btn-ganga-red, a.btn-ganga-red, button.btn-ganga-red {
+    background: #e94d4d;
+    color: #FFF;
+    border: 0;
+    font-family: 'Circular Std Book';
+	line-height: 28px;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 5px 15px;
+}
+
+.btn-ganga-red.rounded {
+	border-radius: 20px;
+}
+
+.btnGangaCenter {
+    width: 70%;
+    margin: 25px auto;
+    display: block;
+    height: 45px;
+    border-radius: 20px;
+}
+
+.slectorBus {
+    font-size: 14px;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+div.form-ganga.col-md-2 select.slectorBus {
+	width: 48%;
+	border: 0;
+	padding-left: 35px;
+	height: 30px;
+}
+
+div.form-ganga.col-md-2 {
+    padding: 1px 0;
+    background: #FFF;
+}
+
+.iconMapa {
+    padding-left: 35px;
+    background-image: url(../images/iconMapa.png);
+    background-repeat: no-repeat;
+    background-position: 2px center;
+    background-size: 26px;
+}
+
+.iconTimbre {
+    padding-left: 35px;
+    background-image: url(../images/iconTimbre.png);
+    background-repeat: no-repeat;
+    background-position: 6px center;
+    background-size: 21px;
+    height: 40px;
+}
+
+.iconTimbreR {
+    padding-left: 35px;
+    background-image: url(../images/iconTimbreR.png);
+    background-repeat: no-repeat;
+    background-position: 6px center;
+    background-size: 21px;
+    height: 40px;
+}
+
+.iconCalendar {
+    padding-left: 35px;
+    background-image: url(../images/iconCalendarB.png);
+    background-repeat: no-repeat;
+    background-position: 6px center;
+    background-size: 21px;
+    height: 40px;
+    width: 49%;
+    display: inline-block;
+}
+
+.iconClock {
+    padding-left: 35px;
+    background-image: url(../images/iconClock.png);
+    background-repeat: no-repeat;
+    background-position: 2px center;
+    background-size: 26px;
+}
+
+.iconBed {
+    padding-left: 35px;
+    background-image: url(../images/iconBedB.png);
+    background-repeat: no-repeat;
+    background-position: 6px center;
+    background-size: 21px;
+    height: 40px;
+    width: 49%;
+    display: inline-block;
+}
+
+.iconPax {
+    padding-left: 35px;
+    background-image: url(../images/iconPaxB.png);
+    background-repeat: no-repeat;
+    background-position: 6px center;
+    background-size: 10px;
+    height: 40px;
+    width: 49%;
+    display: inline-block;
+}
+
+.selectorTipo {
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    font-family: 'Circular Std';
+    padding: 20px 0;
+    border-bottom: 1px solid #c0c1c3;
+}
+
+.selectorTipo.dark {
+    color: #000;
+}
+
+.selectotrGanga {
+    display: inline-block;
+    width: 60px;
+    border-radius: 15px;
+    background: #ffd200;
+    height: 18px;
+    margin: 3px 3px -5px;
+}
+
+.selectotrGanga::after {
+    content: ' ';
+    position: relative;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #e94d4d;
+    display: block;
+    margin: -2px 0;
+    cursor: pointer;
+}
+
+.selectotrGanga.activo::after {
+    float: right;
+}
+
+.fondoBlanco {
+	background: #FFF;
+}
+
+.boxCaliTitu {
+    font-family: 'Circular Std';
+    font-size: 18px;
+    color: #000304;
+    margin-bottom: 10px;
+}
+
+.boxCaliDesc {
+    font-family: 'Circular Std Book';
+    font-size: 14px;
+    color: #7f7f7f;
+}
+
+.boxCalidadHome {
+	margin: 30px 0px 30px -15px;
+    padding: 15px 0;
+    min-height: 100px;
+	display: table;
+}
+
+.tipocelda {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.iconBigCalidad {
+    padding-left: 90px;
+    background: url(../images/iconBigCalidad.png) no-repeat 2px center;
+    background-size: 80px;
+}
+
+.iconConfortable {
+    padding-left: 90px;
+    background: url(../images/iconConfortable.png) no-repeat 2px center;
+    background-size: 80px;
+}
+
+.iconLowCost {
+    padding-left: 90px;
+    background: url(../images/iconLowCost.png) no-repeat 2px center;
+    background-size: 80px;
+}
+
+.iconBigFlexibilidad {
+    padding-left: 90px;
+    background: url(../images/iconBigFlexibilidad.png) no-repeat 2px center;
+    background-size: 80px;
+}
+
+.iconFlexibilidad {
+    padding-left: 90px;
+    background: url(../images/iconFlexibilidad.png) no-repeat 2px center;
+    background-size: 80px;
+}
+
+.iconAlcance {
+    padding-left: 90px;
+    background: url(../images/iconAlcance.png) no-repeat 2px center;
+    background-size: 80px;
+}
+
+.iconBigPrecio {
+    padding-left: 90px;
+    background: url(../images/iconBigPrecio.png) no-repeat 2px center;
+    background-size: 80px;
+}
+
+.tutuloSecHome {
+    font-family: 'Circular Std';
+    font-size: 20px;
+    color: #000304;
+    margin-bottom: 5px;
+}
+
+.textoSecHome {
+    font-family: 'Circular Std Book';
+    font-size: 14px;
+    color: #7f7f7f;
+}
+
+.tutuloSecHomeNat {
+    font-family: 'Lato';
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.textoSecHomeNat {
+    font-family: 'Lato';
+    font-size: 14	px;
+    color: #E94D4D;
+}
+
+.btnVertodoRi2 {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 10px;
+    top: 20px;
+    position: absolute;
+    right: 0;
+}
+
+.btnVertodoRi {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 10px;
+    top: 15px;
+    position: absolute;
+    right: 0;
+}
+
+.cajasitio {
+	position: relative;
+	padding: 25px 15px;
+}
+
+.boxOferta {
+	overflow: hidden;
+	border-radius: 10px;
+	display: block;
+	margin-top: 25px;
+}
+
+.boxOferta img {
+	width: 100%;
+}
+
+a.tagPil {
+    display: inline-block;
+    padding: 10px;
+    margin: 20px 5px 20px 0;
+    border: 1px solid #707070;
+    border-radius: 16px;
+    font-family: 'Circular Std Book';
+    color: #707070;
+	font-size: 12px;
+}
+
+.fotoHotelCar {
+	overflow: hidden;
+	height: 180px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+	display: block;
+	margin-top: 25px;
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+.htHomeLoc {
+    color: #000304;
+    font-size: 16px;
+    font-family: 'Circular Std';
+    margin: 10px auto;
+    padding-left: 20px;
+    background: url(../images/iconMapa.png) no-repeat left center;
+    background-size: 18px;
+}
+
+.htHomeTit {
+    color: #000304;
+    font-size: 24px;
+    font-family: 'Circular Std';
+    margin: 10px auto;
+}
+
+.htHomeDesc {
+    font-family: 'Circular Std Book';
+    color: #7f7f7f;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.htHomePrec {
+    color: #000304;
+    font-size: 16px;
+    font-family: 'Circular Std';
+    margin: 10px auto;
+}
+
+.carrHoteles .owl-nav {
+	z-index: 99999;
+}
+
+.carrHoteles .owl-nav button.owl-prev {
+	left: -15px;
+	color: #EB5251;
+}
+
+.carrHoteles .owl-nav button.owl-next {
+	right: -15px;
+	color: #EB5251;
+}
+
+.carrHoteles .owl-nav button {
+    font-family: 'Circular Std Book';
+    position: absolute;
+    top: 140px;
+    background: #FFF!important;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #b1b1b1!important;
+    border-radius: 50%;
+    font-size: 19px!important;
+    line-height: 30px!important;
+}
+
+.carrHabitaciones .owl-nav {
+	z-index: 99999;
+}
+
+.carrHabitaciones .owl-nav button.owl-prev {
+	left: -15px;
+	color: #EB5251;
+}
+
+.carrHabitaciones .owl-nav button.owl-next {
+	right: -15px;
+	color: #EB5251;
+}
+
+.carrHabitaciones .owl-nav button {
+    font-family: 'Circular Std Book';
+    position: absolute;
+    top: 140px;
+    background: #FFF!important;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #b1b1b1!important;
+    border-radius: 50%;
+    font-size: 19px!important;
+    line-height: 30px!important;
+}
+
+.tipoTabla {
+	display: table;
+	width: 100%;
+	height: 300px;
+}
+
+.fondoExperiencias .tipoTabla {
+	height: 200px;
+}
+
+.tipoTabla2 {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.tipoTablaCel {
+	width: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.fondoExperiencias {
+    background: no-repeat center center url(../images/expeFnd.jpg);
+    background-size: cover;
+    padding: 20px 0;
+    min-height: 250px;
+    margin: 15px auto;
+}
+
+.copyExper {
+	width: 100%;
+	max-width: 440px;
+    color: #FFF;
+    font-size: 16px;
+    font-family: 'Lato';
+    text-align: center;
+    margin: 10px auto;
+}
+
+.titExper {
+	width: 100%;
+    font-family: 'NHL Montreal';
+    color: #FFF;
+    font-size: 60px;
+    text-align: center;
+    margin: 30px auto 15px;
+}
+
+.butExp {
+	width: 100%;
+    text-align: center;
+    padding: 0px;
+}
+
+.contarj {
+    border: 1px solid #BFBFBF;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 10px;
+    margin: 15px auto;
+    text-align: left;
+}
+
+.boxTarj {
+    font-family: 'Circular Std Book';
+    display: inline-block;
+    margin: 0 ;
+    font-size: 12px;
+    color: #7f7f7f;
+    text-align: center;
+}
+
+.boxTarj img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.carrCiudades .owl-nav {
+	z-index: 99999;
+}
+
+.carrCiudades .owl-nav button.owl-prev {
+	left: -15px;
+}
+
+.carrCiudades .owl-nav button.owl-next {
+	right: -15px;
+}
+
+.carrCiudades .owl-nav button {
+    font-family: 'Circular Std Book';
+    position: absolute;
+    top: 150px;
+    background: #FFF!important;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #b1b1b1!important;
+    border-radius: 50%;
+    font-size: 19px!important;
+    line-height: 30px!important;
+}
+
+.fotoCiudCar {
+	overflow: hidden;
+	height: 260px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+	margin-top: 25px;
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+.nombreCiudadH {
+    font-family: 'NHL Montreal';
+    color: #FFF;
+    font-size: 65px;
+    text-align: center;
+}
+
+.fondoSomos {
+    background: no-repeat center center url(../images/fondoSomos.jpg);
+    background-size: cover;
+    padding: 60px 0;
+    min-height: 350px;
+}
+
+.iconSomos{
+    background: no-repeat center top;
+    padding-top: 50px;
+    font-family: 'NHL Montreal';
+    width: 10%;
+    display: inline-block;
+    color: #FFF;
+}
+
+.iconAereos {
+    background-image: url(../images/iconAereos.png);
+}
+
+.iconBus {
+    background-image: url(../images/iconBus.png);
+}
+
+.iconHotel {
+    background-image: url(../images/iconHotel.png);
+}
+
+.iconRentAcar {
+    background-image: url(../images/iconRentAcar.png);
+}
+
+.iconTranslado {
+    background-image: url(../images/iconTranslado.png);
+}
+
+img.imgLogoSomos {
+    display: block;
+    margin: 0 auto;
+}
+
+img.imgLogoClub {
+    display: block;
+    margin: 0 auto;
+}
+
+.titClub .redT {
+	color: #e94d4d;
+}
+
+.rowClubGan {
+	padding: 40px 0;
+}
+
+.titClub {
+    font-family: 'NHL Montreal';
+    color: #000;
+    font-size: 72px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.subClub {
+    font-family: 'Circular Std';
+    color: #000304;
+    font-size: 34px;
+    text-align: center;
+    margin: 0px auto 35px;
+    letter-spacing: 4px;
+}
+
+.fondoGangaApp {
+    background: no-repeat center center url(../images/fondoGangaApp.jpg);
+    background-size: cover;
+    padding: 60px 0;
+    min-height: 350px;
+}
+
+.copyGangaApp {
+	width: 100%;
+    color: #FFF;
+    font-size: 36px;
+    font-family: 'Circular Std';
+    text-align: center;
+    margin: 40px auto 20px;
+}
+
+.copyGangaApp2 {
+	width: 100%;
+    color: #FFF;
+    font-size: 24px;
+    font-family: 'Circular Std Book';
+    text-align: center;
+    margin: 20px auto 40px;
+}
+
+.listadoItems {
+	color: #000304;
+    font-size: 16px;
+    font-family: 'Circular Std Book';
+    padding: 80px 0;
+}
+
+.titColumna {
+    font-size: 24px;
+    font-family: 'Circular Std';
+    padding-bottom: 16px;
+}
+
+.listadoItems li a {
+    color: #000304;
+}
+
+.listadoItems li{
+    padding-bottom: 8px;
+}
+
+span.copyriBot {
+    font-family: 'Lato';
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+}
+
+img.logoBotom {
+    width: 240px;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+
+.redesCont {
+    color: #FFF;
+}
+
+.redesCont a {
+    color: #FFF!important;
+    margin: 0 10px;
+    line-height: 80px;
+}
+
+.error404T {
+	font-size: 50px;
+    font-family: 'Circular Std';
+    color: #000304;
+    padding-bottom: 26px;
+    padding-top: 26px;
+}
+
+.error404S {
+	font-size: 16px;
+    font-family: 'Circular Std Book';
+    color: #000304;
+    padding-bottom: 80px;
+}
+
+.titGenerico {
+	font-size: 30px;
+    font-family: 'Circular Std';
+    color: #000304;
+    padding-bottom: 26px;
+    padding-top: 26px;
+}
+
+.txtGenerico {
+	font-size: 16px;
+    font-family: 'Circular Std Book';
+    color: #000304;
+    padding-bottom: 80px;
+}
+
+.mapaBusquedaLat {
+	width: 100%;
+	height: 380px;
+}
+
+.roundButton {
+	border-radius: 20px;
+}
+
+.btnBorrarFil {
+	font-size: 12px!important;
+	display: block;
+    margin: 15px 0;
+}
+
+.boxFiltros {
+}
+
+.filtrosCont {
+    padding: 18px 0;
+    width: 83.33333333%;
+    float: left;
+	position: relative;
+}
+
+.pilFiltro {
+	font-size: 12px;
+    font-family: 'Circular Std Book';
+	display: inline-block;
+	margin-right: 10px;
+	padding: 8px 15px;
+	border: 1px solid #cccccc;
+	color: #010101!important;
+	background: #FFF;
+	border-radius: 20px;
+}
+
+.pilMasFiltros {
+	font-size: 12px;
+    font-family: 'Circular Std Book';
+	display: inline-block;
+	margin-right: 10px;
+	padding: 8px 15px;
+	border: 1px solid #cccccc;
+	color: #e94d4d!important;
+	background: #FFF;
+	border-radius: 20px;
+}
+
+.mensajeResultados {
+	font-size: 15px;
+    font-family: 'Circular Std Book';
+	color: #000;
+	padding: 10px 0;
+}
+
+.colorTRojo {
+	color: #e94d4d!important;
+}
+
+.ordenpag {
+    padding: 30px 0 20px;
+    display: inline-block;
+}
+
+.totRes {
+    font-family: 'Circular Std Book';
+    color: #7f7f7f;
+    font-size: 16px;
+}
+
+.boxBtnOrdenar {
+    float: right;
+    display: inline-block;
+    padding: 20px 0 15px;
+}
+
+.btnOrdenarBus {
+    background: none!important;
+    border: 0!important;
+    box-shadow: none!important;
+    font-family: 'Circular Std Book'!important;
+    color: #7f7f7f!important;
+    font-size: 16px!important;
+}
+
+.contenidoBoxClub {
+    padding-left: 50%;
+    text-align: center;
+}
+
+.boxClubGangaHome {
+    background: #fed430 no-repeat left center url(../images/fndBoxClubGanga.jpg);
+    background-size: cover;
+    padding: 15px;
+    min-height: 230px;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+
+.tituloBoxGan {
+    color: #E84D4D;
+    font-family: 'Lato-Semibold';
+    font-size: 40px;
+    margin: 0 0 5px;
+}
+
+.descBoxGan {
+    color: #E84D4D;
+    font-family: 'Lato-Semibold';
+    font-size: 25px;
+    line-height: 25px;
+    margin: 15px 0;
+}
+
+.legalBoxGan {
+    color: #E84D4D;
+    font-family: 'Lato-Semibold';
+    font-size: 12px;
+    line-height: 14px;
+    margin: 15px 0 0;
+}
+
+a.btnVerProg {
+    color: #E84D4D;
+    font-family: 'Lato-Semibold';
+    font-size: 14px;
+    line-height: 16px;
+    display: block;
+    border: 1px solid #E84D4D;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 14px;
+    padding: 5px 15px;
+}
+
+.boxOfertonHome {
+    background: #E84D4D;
+    padding: 0 0;
+    border-radius: 8px;
+    min-height: 270px;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.logomasterHoriz {
+	background: no-repeat left center url(../images/logomasterHoriz.png);
+    background-size: contain;
+    height: 40px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.cuotasamarillo {
+	background: no-repeat center center url(../images/6cuotasamarillo.png);
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.boxcondiOferHome {
+    width: 100%;
+    color: #FFF;
+}
+
+.textoLeOferHome {
+    width: 110px;
+    float: left;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+a.btnLeOferHome {
+    display: block;
+    float: right;
+    font-size: 14px;
+    color: #FFF!important;
+    border: 1px solid #FFF;
+    padding: 8px 10px;
+    border-radius: 15px;
+}
+
+div#slideofertasminihome {
+    margin: 0 -15px;
+}
+
+.itemcarruhomepromo {
+    height: 230px;
+    width: 100%;
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+
+.fndMuchomas {
+	overflow: hidden;
+	height: 220px;
+    border-radius: 10px;
+	margin-top: 25px;
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+.fndPasajes {
+    background-image: url(../images/fndPasajes.jpg);
+}
+
+.fndExperiencias {
+    background-image: url(../images/fndExperienciasH.jpg);
+}
+
+.fndTraslados {
+    background-image: url(../images/fndTraslados.jpg);
+}
+
+.fndRentalCar {
+    background-image: url(../images/fndRentalCar.jpg);
+}
+
+.titMuchamas {
+    font-family: 'Lato-Semibold';
+    font-size: 22px;
+    color: #000000!important;
+    padding-left: 35px;
+    background: no-repeat left center;
+    background-size: contain;
+    margin-top: 10px;
+}
+
+.iconPasajesHS {
+    background-image: url(../images/iconPasajesHS.png);
+}
+
+.iconExperienciasHS {
+    background-image: url(../images/iconExperienciasHS.png);
+}
+
+.iconTrasladosHS {
+    background-image: url(../images/iconTrasladosHS.png);
+}
+
+.iconRentalCarHS {
+    background-image: url(../images/iconRentalCarHS.png);
+}
+
+.txtMuchamas {
+    font-family: 'Lato';
+    background-size: contain;
+    font-size: 16px;
+    color: #606060!important;
+    margin-top: 10px;
+}
+
+.top0 {
+	top: 0;
+}
+
+.bannerGangaApp {
+    background: no-repeat center center #fe7223 url(../images/bannerGangaApp.jpg);
+    min-height: 360px;
+    border-radius: 10px;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.titBannerApp {
+    font-family: 'Lato-Semibold';
+    font-size: 40px;
+    color: #FFF!important;
+    margin-bottom: 15px;
+}
+
+.txtBannerApp {
+    font-family: 'Lato';
+    font-size: 24px;
+    color: #FFF!important;
+    margin-bottom: 25px;
+}
+
+.fndFormOfertas{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background: #FFD207;
+}
+
+.iconSobre {
+    background: no-repeat left center url(../images/iconSobre.png);
+    background-size: contain;
+    color: #313131;
+    font-size: 10px;
+    padding-left: 25px;
+    margin-top: 3px;
+}
+
+.txtrojoOfer {
+    color: #E94D4D;
+    font-size: 14px;
+    line-height: 25px;
+    font-family: 'Lato';
+}
+
+#emailofertas {
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 210px;
+	margin: 15px auto;
+}
+
+.btnEnviarEmailOfertas {
+    background: #EB5251;
+    border: 0;
+    font-size: 12px;
+    font-family: 'Lato';
+    padding: 7px 15px;
+    color: #FFF;
+    border-radius: 15px;
+}
+
+.btnFoooterPreAccesos {
+    border: 1px solid #EB5251;
+    border-radius: 15px;
+    padding: 7px 15px;
+    color: #EB5251;
+    margin: 15px 10px 30px;
+    display: inline-block;
+	font-size: 12px;
+}
+
+.textoFooter {
+	color: #FFF;
+    font-size: 16px;
+    font-family: 'Lato';
+    line-height: 22px;
+}
+
+.linksFooter {
+    padding: 30px 0;
+    line-height: 22px;
+}
+
+.linksFooter a {
+	color: #FFF;
+    font-size: 18px;
+    font-family: 'Lato';
+    display: block;
+}
+
+.cajaHotelResultados {
+    min-height: 150px;
+}
+
+.thumbHotelResultados {
+    width: 100%;
+    min-height: 150px;
+    background: no-repeat center center;
+    background-size: cover;
+    border-radius: 8px;
+    position: relative;
+}
+
+.thumbHotelResultadosApp {
+    width: 100%;
+    min-height: 240px;
+    background: no-repeat center center;
+    background-size: cover;
+    border-radius: 8px;
+    position: relative;
+    margin: 25px auto;
+}
+
+.cintaoferta {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    padding: 5px;
+    background: red;
+    border-radius: 0 10px 10px 0;
+    color: #FFF;
+    font-size: 11px;
+    font-family: 'Lato';
+}
+
+a.iconLike {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    color: #FFF;
+}
+
+.geoHotelResultados {
+    font-size: 13px;
+    font-family: 'Lato';
+    color: #000;
+    padding-left: 16px;
+    margin-bottom: 10px;
+    background: no-repeat top left url(../images/pinMap.png);
+    background-size: 11px;
+    line-height: 16px;
+    margin-top: 6px;
+}
+
+.nombreHotelResultados {
+    font-size: 18px;
+    font-family: 'Lato';
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.descHotelResultados {
+    font-size: 14px;
+    font-family: 'Lato';
+    margin-bottom: 10px;
+    color: #606060;
+}
+
+.ratingsHotelResultados .fa.fa-star {
+	color: #D9D9D9;
+}
+
+.precioHotelResultados {
+    font-size: 18px;
+    font-family: 'Lato';
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.ratingsHotelResultados {
+    font-size: 13px;
+    color: #000;
+}
+
+.ratingsHotelResultados .fa.fa-star.goldstar {
+	color: #FFE622;
+}
+
+.hotelExtraIcon {
+    background: no-repeat center center;
+    background-size: contain;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    margin: 10px 10px 10px 0;
+}
+
+.iconHotelC_1 {
+	background-image: url(../images/iconHotelC_1.png);
+}
+
+.iconHotelC_2 {
+	background-image: url(../images/iconHotelC_2.png);
+}
+
+.iconHotelC_3 {
+	background-image: url(../images/iconHotelC_3.png);
+}
+
+.iconHotelC_4 {
+	background-image: url(../images/iconHotelC_4.png);
+}
+
+.boxLegalHotelResultados {
+    font-family: 'Lato';
+    font-size: 12px;
+    color: #707070;
+}
+
+.boxLegalHotelResultados a{
+    color: #E94D4D!important;
+}
+
+a.btnMasHotelResultados {
+    position: relative;
+    /* bottom: 0; */
+    /* right: 0; */
+    padding: 10px 25px;
+    color: #FFF!important;
+    text-decoration: none;
+    background: #E94D4D;
+    border-radius: 25px;
+    display: block;
+    width: fit-content;
+    margin: 5px auto;
+}
+
+.resultadosToolsBox {
+/*
+    overflow: hidden;
+*/
+}
+
+.qPHBlock {
+    margin: 25px -15px;
+}
+
+.imagenqPHBlock {
+    width: 100%;
+    height: 200px;
+    background: no-repeat center center;
+    background-size: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tituloqPHBlock {
+    font-size: 17px;
+    font-family: 'Lato';
+    margin-bottom: 25px;
+}
+
+.custom-control-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-control {
+    position: relative;
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.custom-control-label {
+    position: relative;
+    margin-bottom: 0;
+    vertical-align: top;
+	line-height: 24px;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: #E94D4D;
+    border-color: #E94D4D;
+    background-color: #FFF;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='rgb(233, 077, 077)' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/></svg>");
+    
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: .25rem;
+}
+
+.custom-control-label::before, .custom-file-label, .custom-select {
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.custom-control-label::before {
+    position: absolute;
+    top: .25rem;
+    left: -1.5rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+    content: "";
+    background-color: #fff;
+    border: #adb5bd solid 1px;
+}
+
+.custom-control-label::after {
+    position: absolute;
+    top: .25rem;
+    left: -1.5rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    border: 1px solid #E94D4D;
+    background: #E94D4D;
+    font-weight: normal;
+    color: #E94D4D;
+    border-radius: 110px;
+    outline: none;
+}
+
+div#rangePrecio {
+    border: 0;
+    height: 1px;
+    background: #E94D4D;
+	margin: 25px 0;
+}
+
+span.ui-slider-handle.ui-corner-all.ui-state-default {
+    top: -9px;
+}
+
+.titFiltro {
+    font-size: 18px;
+    font-family: 'Lato';
+    margin-bottom: 15px;
+}
+
+.rangocont {
+    border: 1px solid #707070;
+    padding: 8px 8px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Lato';
+}
+
+div#filtrosBags {
+    margin-bottom: 25px;
+}
+
+.row.bloqueHotelResultados {
+    margin-bottom: 45px;
+}
+
+.row.imagenesHotelesCont {
+    padding: 15px 0;
+}
+
+.bloqueImgHotelBig {
+    width: 100%;
+    height: 380px;
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+.bloqueImgHotelMid {
+    width: 100%;
+    height: 200px;
+    background: no-repeat center center;
+    background-size: cover;
+}	
+
+.bloqueImgHotelSmall {
+    width: 100%;
+    height: 165px;
+    background: no-repeat center center;
+    background-size: cover;
+    margin-top: 15px;
+}
+
+.padlef0 {
+    padding-left: 0;
+}
+
+.boxInfoHotelBig .nombreHotelResultados {
+    margin-top: 15px;
+}
+
+.condicionesTit {
+    margin-top: 15px;
+	font-size: 22px;
+    font-family: 'Lato';
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.boxInfoHotelBig .descHotelResultados {
+    line-height: 20px;
+}
+
+.amenitieblock {
+    background: no-repeat left center;
+    background-size: contain;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.tituloCondiTip {
+    font-size: 14px;
+    color: #000;
+    font-family: 'Lato';
+    margin-bottom: 10px;
+    padding-left: 25px;
+    background: no-repeat center left;
+    background-size: contain;
+    line-height: 16px;
+}
+
+.iconHorarios {
+    background-image: url(../images/iconHorarios.png);
+}
+
+.iconDesayuno {
+    background-image: url(../images/iconDesayuno.png);
+}
+
+.condicionesTxt {
+    color: #313131;
+    font-size: 14px;
+    font-family: 'Lato';
+    line-height: 16px;
+}
+
+.iconCheckin {
+    background: no-repeat center left url(../images/iconCheckin.png);
+    background-size: contain;
+    padding-left: 20px;
+}
+.iconCheckout {
+    background: no-repeat center left url(../images/iconCheckout.png);
+    background-size: contain;
+    padding-left: 20px;
+}
+
+.fondoComentarios {
+    background: #E8E8E8;
+    padding: 20px 0;
+    margin: 25px -15px;
+}
+
+img.iconUsuarioRound {
+    width: 100%;
+    display: block;
+}
+
+.usernameComentB {
+    font-size: 14px;
+    font-family: 'Lato';
+    margin: 5px 0;
+    color: #000;
+    margin-left: -15px;
+}
+
+.datosComentB {
+    font-size: 12px;
+    font-family: 'Lato';
+    margin: 5px 0;
+    color: #000;
+    margin-left: -15px;
+}
+
+.descComentB {
+    font-size: 14px;
+    font-family: 'Lato';
+    font-style: italic;
+    margin: 5px 0;
+    color: #606060;
+    margin-left: -15px;
+}
+
+.boxPrecio {
+    -webkit-box-shadow: 0px 0px 22px 5px rgba(179,175,179,1);
+    -moz-box-shadow: 0px 0px 22px 5px rgba(179,175,179,1);
+    box-shadow: 0px 0px 22px 5px rgba(179,175,179,1);
+    padding: 10px 20px;
+    text-align: center;
+    background: #FFF;
+    position: fixed;
+    bottom: 0;
+	margin-left: -15px;
+	z-index: 999;
+	width: 100%;
+}
+
+span#precioResumen {
+    font-size: 26px;
+    text-align: center;
+}
+
+.boxPrecio.precioBoxFijo {
+    position: fixed;
+    top: 40px;
+	z-index: 9999;
+}
+
+.descPrecio {
+    font-size: 12px;
+    font-family: 'Lato';
+	width: 70%;
+	margin-bottom: 5px;
+}
+
+.row.tabasa {
+    padding-bottom: 20px;
+}
+
+.contPrecio {
+    color: #000;
+	width: 70%;
+}
+
+.precioFin {
+    font-size: 20px;
+    line-height: 20px;
+    display: block;
+    text-align: center;
+	padding: 0;
+}
+
+.txtPrecioTR {
+	margin: 5px auto 0;
+    font-size: 14px;
+}
+
+a.btnSiguiente.linkderecho {
+    float: right;
+    margin-top: -53px;
+    background: #EB5251;
+    border: 0;
+    font-size: 12px;
+    font-family: 'Lato';
+    padding: 15px 15px;
+    color: #FFF;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+a.btnVerHabitaciones {
+    background: #EB5251;
+    border: 0;
+    font-size: 12px;
+    font-family: 'Lato';
+    padding: 15px 15px;
+    color: #FFF;
+    border-radius: 25px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+a.btnRedGangaBig {
+    background: #EB5251;
+    border: 0;
+    font-size: 12px;
+    font-family: 'Lato';
+    padding: 15px 35px;
+    color: #FFF;
+    border-radius: 25px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.botoneraConserje {
+    background: #EB5251;
+    height: 100%;
+}
+
+a.btnRedGangaBigInv {
+    background: transparent;
+    border: 2px solid #EB5251;
+    font-size: 12px;
+    font-family: 'Lato';
+    padding: 15px 35px;
+    color: #EB5251;
+    border-radius: 25px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+button.btnRedGangaBig {
+    background: #EB5251;
+    border: 0;
+    font-size: 12px;
+    font-family: 'Lato';
+    padding: 15px 15px;
+    color: #FFF;
+    border-radius: 25px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.condicionesdepago {
+    font-size: 12px;
+    font-family: 'Lato';
+    line-height: 16px;
+}
+
+a.linkganga {
+    color: #EB5251;
+}
+
+.titLogin {
+    font-family: 'Lato-Semibold';
+    font-size: 22px;
+    color: #e94d4d;
+    margin-bottom: 10px;
+}
+
+.txtLogin {
+    color: #8B8B8B;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.titConfEstadia {
+    font-family: 'Lato-Semibold';
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.boxbotoneslogin {
+    padding: 25px 0;
+}
+
+.btnLogines {
+    display: block;
+    padding: 10px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #DDD;
+    border-radius: 20px;
+}
+
+a#btnLoginFB {
+    background: #3C5D96;
+    border-color: #3C5D96;
+    color: #FFF;
+    text-decoration: none;
+}
+
+a#btnLoginGoogle {
+    text-decoration: none;
+    border-color: #CF5D46;
+    color: #000;
+}
+
+a#btnLoginGoogle i {
+    color: #CF5D46;
+}
+
+a#btnIngresarMail {
+    text-decoration: none;
+    border-color: #e94d4d;
+    color: #000;
+}
+
+a#btnIngresarMail i {
+    color: #e94d4d;
+}
+
+a#btnRegistrate {
+    text-decoration: none;
+    background: #e94d4d;
+    border-color: #e94d4d;
+    color: #FFF;
+    text-decoration: none;
+    margin-top: 45px;
+}
+
+.btnGangaBig {
+    display: block;
+    padding: 10px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #DDD;
+    border-radius: 20px;
+    text-decoration: none;
+    background: #e94d4d;
+    border-color: #e94d4d;
+    color: #FFF;
+    width: 100%;
+}
+
+.btnGangaSmall,
+a.btnGangaSmall {
+    display: block;
+    padding: 5px 15px;
+    margin: 15px auto;
+    border: 1px solid #DDD;
+    border-radius: 20px;
+    text-decoration: none;
+    background: #e94d4d;
+    border-color: #e94d4d;
+    color: #FFF;
+    width: auto;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.btnGangaBig.top45 {
+    margin-top: 45px;
+}
+
+.form-group label {
+    display: block;
+    width: 100%;
+    padding: 6px;
+    text-align: left;
+}
+
+.panelLoginSec {
+	position: relative;
+	overflow: hidden;
+}
+
+.boxlogin.oculta {
+	opacity: 0;
+	position: absolute;
+    width: calc(100% - 30px);
+    z-index: 9990;
+    left: 15px;
+}
+
+.boxlogin {
+    margin: 15px auto 0;
+    padding: 0;
+    text-align: center;
+	position: relative;
+    top: 0;
+    width: 80%;
+    transition: all 300ms;
+/*
+    transition-delay: 600ms;
+*/
+    opacity: 1;
+    z-index: 9999;
+    
+}
+
+button.close {
+    opacity: 1!important;
+    color: #FFF!important;
+    text-shadow: none!important;
+}
+
+a.linklogin {
+    color: #e94d4d;
+    margin: 10px;
+    font-size: 12px;
+    display: block;
+}
+
+.linksaccioneslog {
+    margin: 40px auto 20px;
+}
+
+.popover {
+    border-color: #e94d4d;
+    padding: 0;
+}
+
+.popover.bottom > .arrow:after {
+    top: 1px;
+    margin-left: -10px;
+    content: " ";
+    border-top-width: 0;
+    border-bottom-color: #e94d4d;
+}
+
+.popover-title {
+    color: #FFF;
+    background: #e94d4d;
+    font-size: 14px;
+}
+
+.popover-content {
+    color: #e94d4d;
+    font-size: 10px;
+}
+
+.fotoHabitacionMini {
+    border-radius: 8px;
+    background: no-repeat center center;
+    background-size: contain;
+    width: calc(100% + 30px);
+    height: 80px;
+    margin: 0 -15px;
+}
+
+
+
+.descHabitRes {
+    font-size: 12px;
+	margin: 15px -10px;
+}
+
+.row.cajainfoHabit {
+    border-top: 1px solid #BFBFBF;
+    border-bottom: 1px solid #BFBFBF;
+    border-radius: 0;
+    padding: 8px 0;
+    margin-bottom: 15px;
+    transition: all 500ms;
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.row.cajainfoHabit.activaHab {
+    border-color: #e94d4d;
+}
+
+.tipohabitacion {
+    font-size: 12px;
+    margin-top: 5px;
+    background: no-repeat top center;
+    background-size: 35px;
+}
+
+.carrHabitaciones .item {
+    padding: 15px 25px;
+    margin: 40px 15px;
+    border: 1px solid #ccc;
+        background: #FFF;
+    border-radius: 8px;
+}
+
+.carrHabitaciones .item.activo {
+	border-color: #e94d4d;
+}
+
+.tipohabitacion.multiper {
+    background-position: left center;
+    background-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 28px;
+}
+
+.precioResHabita {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.cantidadDsipHabita {
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.cantidadDsipHabita i {
+    font-size: 18px;
+}
+
+.cmboTextoResHab.greenText {
+	color: #059F8E;
+}
+
+.cmboTextoResHab.redText {
+	color: #E94D4D;
+}
+
+.cmboTextoResHab {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cmboTextoResHab i {
+    font-size: 18px;
+    margin-right: 5px;
+    display: inline-block;
+    width: auto;
+    float: left;
+}
+
+.multiper {
+    background-image: url(../images/personmult.png);
+}
+
+.iconTarjeta {
+    background: url(../images/iconTarjeta.png) no-repeat center center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    top: 5px;
+    position: relative;
+}
+
+.iconAlojamiento {
+    background: url(../images/iconAlojamiento.png) no-repeat center center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    top: 5px;
+    position: relative;
+}
+
+.contecombottexthab {
+    display: inline-block;
+    width: 80%;
+}
+
+.textotarjetreshabi {
+    display: inline-block;
+}
+
+.selectorGanga {
+    height: 25px;
+    width: 25px;
+    border: 3px solid #BFBFBF;
+    border-radius: 50px;
+    text-align: center;
+    position: relative;
+/*
+    top: 35px;
+*/
+    margin: 0 auto;
+    cursor: pointer;
+    display: block;
+}
+
+.selectorGanga > input:checked ~ span {
+    border: 2px solid #E94D4D;
+    background: #E94D4D;
+}
+
+.row.cajainfoHabit.activaHab .selectorGanga {
+	border-color: #E94D4D;
+}
+
+.selectorGanga > span {
+	background: none;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    height: 13px;
+    width: 13px;
+    border-radius: 50% !important;
+}
+
+.selectorGanga > span:after {
+    content: '';
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    margin-left: -3px;
+    margin-top: -3px;
+    width: 6px;
+    height: 6px;
+    border-radius: 100% !important;
+}
+
+.selectorGanga > input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.selectorGanga > input[type="radio"], .selectorGanga > input[type="checkbox"] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.boxHabitacionResultados {
+	margin-bottom: 35px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #BFBFBF;
+}
+
+a.btnRedGangaBig.fndEmpty {
+    background: transparent;
+    color: #EB5251;
+    border: 1px solid #EB5251;
+}
+
+.titConfEstadia {
+    font-family: 'Lato-Semibold';
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.boxExtraDe {
+    border: 1px solid #BFBFBF;
+    border-radius: 8px;
+    padding: 10px;
+	position: relative;
+	margin: 15px auto;
+}
+
+.boxExtraDe.activaHab {
+    border: 1px solid #E94D4D;
+}
+
+.descExtra {
+    font-family: 'Lato-Semibold';
+	font-size: 16px;
+    line-height: 22px;
+    max-width: 80%;
+    display: inline-block;
+}
+
+.slectorExtra {
+    display: inline-block;
+    width: 20%;
+    position: absolute;
+    left: unset;
+    right: 0;
+    top: 0;
+}
+
+
+
+.boxExtraDe.activaHab .selectorGanga {
+	border-color: #E94D4D;
+}
+
+.slectorExtra label.selectorGanga {
+    top: 23px;
+    width: 15px;
+    height: 15px;
+    border-width: 1px;
+    right: 8px;
+    position: absolute;
+}
+
+.slectorExtra .selectorGanga > input:checked ~ span {
+    border-width: 1px;
+    height: 9px;
+    width: 9px;
+    top: 2px;
+    left: 2px;
+}
+
+.buttonConfEstadia {
+    padding: 15px 0;
+}
+
+.confHabitacionesRes {
+}
+
+.selectorReserva {
+	top: auto;
+	display: inline-block;
+}
+
+.titconfcompra .linkganga {
+    font-size: 14px;
+}
+
+.smaletextdescriptivo {
+    font-size: 14px;
+}
+
+.titconfcompra {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-family: 'Lato';
+}
+
+.boxgangares {
+    padding: 15px;
+    border: 1px solid #bcbcbc;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.paddtop25 {
+	padding-top: 25px;
+}
+
+.selectorReserva .textoinputlabel {
+    width: max-content;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.selectorconteiner {
+	margin-bottom: 10px;
+}
+
+.subtitselevrt {
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.boxgangares.sinborde {
+    padding: 0;
+    overflow: hidden;
+}
+
+.cajaDetalleTot {
+    padding: 15px;
+    color: #606060;
+    font-size: 14px;
+    font-family: 'Lato-Semibold';
+}
+
+.cajaRedtotal {
+    padding: 15px;
+    background: #e94d4d;
+    color: #FFF500;
+    font-size: 22px;
+    font-family: 'Lato-Semibold';
+}
+
+.prefioright {
+    float: right;
+}
+
+.tablacomrpa {
+    font-size: 14px;
+    font-family: 'Lato-Semibold';
+	width: 100%;
+	color: #606060;
+	line-height: 22px;
+}
+
+.compracheckSt {
+	color: #000000;
+}
+
+.tipohabcompra {
+    padding: 15px;
+    border: 1px solid #e94d4d;
+    border-radius: 8px;
+    color: #e94d4d;
+    font-size: 14px;
+    font-family: 'Lato-Semibold';
+    margin: 15px 0;
+}
+
+.amenitiescont {
+    padding: 25px 0;
+}
+
+.bxonuevaTarje {
+    padding: 15px;
+    border: 1px solid #bcbcbc;
+    border-radius: 8px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.siimbolplustar {
+    padding: 15px;
+    border: 1px solid #bcbcbc;
+    border-radius: 8px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.modal-header {
+    background: #e94d4d;
+    color: #FFF500;
+}
+
+.experienciascont .col-md-4 {
+    height: 410px;
+}
+
+
+.menuflotante {
+	position: fixed;
+	right: -100vw;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+}
+
+a.linklogotop img {
+    height: 30px;
+}
+
+
+.bannerHome {
+	background: url(../images/fondoHeaderHome.jpg) center center no-repeat;
+	background-size: cover;
+	padding: 30px 0;
+	margin-bottom: 15px;
+	margin-top: 120px;
+}
+
+
+.bloqueHotelResultados {
+    padding-top: 20px;
+}
+
+.bototnerasapp {
+	position: fixed;
+	bottom: -80px;
+	left: 0;
+	background: #e3e3e3;
+	padding: 15px;
+	text-align: center;
+    width: 100%;
+    z-index: 999;
+    transition: 1s all;
+}
+
+.ventana.activa .bototnerasapp {
+    bottom: 0;
+}
+
+.bototnerasappRed {
+	position: fixed;
+	bottom: -80px;
+	left: 0;
+	background: #e94d4d;
+	padding: 15px;
+	text-align: center;
+    width: 100%;
+    z-index: 999;
+    transition: 1s all;
+}
+
+.ventana.activa .bototnerasappRed {
+    bottom: 0;
+}
+
+.btnBotonera {
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    margin: 0 5px;
+    color: #000!important;
+    font-size: 12px;
+    text-decoration: none!important;
+}
+
+.bototnerasappRed .btnBotonera {
+    color: #FFF!important;
+}
+
+.btnBotonera i, .btnBotonera2 i {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.btnBotonera2 {
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    margin: 0 5px;
+    color: #FFF!important;
+    font-size: 12px;
+    text-decoration: none!important;
+}
+
+.tituloventana {
+    text-align: center;
+    font-size: 18px;
+}
+
+a.linktopvolver {
+    float: left;
+    margin-left: -10px;
+    color: #FFF!important;
+    text-decoration: none!important;
+}
+
+a.linktopvolver.righttt {
+    float: right;
+    margin-right: -10px;
+    margin-top: -17px;
+}
+
+.iconMapabt {
+	background: url(../images/iconMapaW.png) center center no-repeat;
+}
+
+.iconFiltrar {
+	background: url(../images/iconFiltrar.png) center center no-repeat;
+}
+
+.iconOrdenar {
+	background: url(../images/iconOrdenar.png) center center no-repeat;
+}
+
+.btnBuscar {
+	background: url(../images/btnBuscar.png) center center no-repeat;
+}
+
+.btnDescubri {
+	background: url(../images/btnDescubri.png) center center no-repeat;
+}
+
+.btnFavoritos {
+	background: url(../images/btnFavoritos.png) center center no-repeat;
+}
+
+.btnPerfil {
+	background: url(../images/btnPerfil.png) center center no-repeat;
+}
+
+.btnConserje {
+	background: url(../images/btnConserje.png) center center no-repeat;
+}
+
+.boxresultadosresumen {
+    background: #FFF;
+    padding: 20px 0;
+    border-bottom: 1px solid #c0c1c3;
+}
+
+.resultadoFecha img {
+    vertical-align: middle;
+}
+
+.ventana .container {
+	padding-bottom: 50px;
+}
+
+.consieg_botoneracont {
+    background: #e94d4d;
+    margin-left: -15px;
+    margin-right: -15px;
+    height: calc(100% - 45px);
+    display: table;
+    width: calc(100% + 30px);
+}
+
+.consieg_botoneracontIn {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+	padding: 0 20px;
+}
+
+table.consieg_botonera td{
+    padding: 27px 0;
+}
+
+table.consieg_botonera td.todo{
+	border: 1px solid #FFF;
+}
+table.consieg_botonera td.costados{
+	border-left: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+}
+
+table.consieg_botonera td.aribaabajo{
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+}
+
+table.consieg_botonera {
+    width: 100%;
+}
+
+a.btnConsiergeMenu {
+    color: #FFF!important;
+    font-size: 16px;
+    text-decoration: none!important;
+}
+
+.btnConsiergeMenu i {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.nav-tabs > li {
+    width: 50%;
+    text-align: center;
+}
+
+.tabasa .nav-tabs > li a {
+    color: #000!important;
+    text-decoration: none!important;
+    border-radius: 0;
+	background-color: #fff;
+	border: 0!important;
+    border-bottom: 1px solid transparent!important;
+    margin: 0;
+}
+
+.tabasa .nav-tabs > li.active a {
+	border-bottom-color: #e94d4d!important;
+}
+
+
+.alarmaContent {
+    border-bottom: 1px solid #666;
+    padding: 15px;
+    height: 90px;
+}
+
+.horaAlarma {
+    font-family: 'Lato-Semibold';
+    font-size: 38px;
+    display: block;
+    position: relative;
+    clear: both;
+}
+
+.alarmaContent.inactiva .col-xs-2 i, .alarmaContent.inactiva  {
+    color: #999;
+}
+
+.alarmaContent.inactiva .selectotrGanga  {
+    background: #999;
+}
+
+.alarmaContent .col-xs-2 i {
+    font-size: 36px;
+    line-height: 60px;
+    color: #e94d4d;
+}
+
+.subtituloventana {
+    font-size: 24px;
+    padding: 25px;
+    border-bottom: 1px solid #666;
+}
+
+.tituloAlarma {
+    font-size: 14px;
+}
+
+.tituloForm {
+    padding: 15px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+input#nuevalarma {
+    margin-bottom: 35px;
+}
+
+div#pantalla_menu header.interna {
+    padding: 15px;
+}
+
+div#pantalla_menu {
+    background: #e94d4d;
+    font-size: 18px;
+    color: #FFF;
+}
+
+a.linkMenu {
+    color: #FFF!important;
+    padding: 10px 20px;
+    display: block;
+    border-bottom: 1px solid #FFF;
+}
+
+div#pantalla_bienvenida {
+    background: #e94d4d;
+}
+
+.splashCont {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.splashCell {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+input.al100 {
+    width: 100%;
+    margin: 15px auto;
+}
+
+
+.notlogedcont {
+    text-align: center;
+    padding: 35px 15px;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.notificacionescont {
+    padding: 0 0 15px;
+}
+
+.notificacioncont {
+    margin-bottom: 10px;
+    padding: 15px;
+    border-bottom: 1px solid #BBB;
+    font-size: 18px;
+}
+
+.notificacioncont i {
+    font-size: 40px;
+}
+
+i.iconnotif span {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 10px;
+}
+
+i.iconnotif {
+    position: relative;
+}
+
+
+.ui-front {
+    z-index: 999999;
+}
+
+.modal {
+    z-index: 9999999999;
+}
+
+.userblock h1 {
+    padding: 10px 20px;
+    font-size: 22px;
+    margin-bottom: 8px;
+}

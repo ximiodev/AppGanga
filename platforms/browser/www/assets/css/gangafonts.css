@@ -1,0 +1,276 @@
+@font-face {
+  font-family: 'gangaicons';
+  src:  url('../fonts/gangaicons.eot');
+  src:  url('../fonts/gangaicons.eot#iefix') format('embedded-opentype'),
+    url('../fonts/gangaicons.ttf') format('truetype'),
+    url('../fonts/gangaicons.woff') format('woff'),
+    url('../fonts/gangaicons.svg#gangaicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="gangaicons-"], [class*=" gangaicons-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'gangaicons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gangaicons-house:before {
+  content: "\e900";
+}
+.gangaicons-gauge-dashboard-1:before {
+  content: "\e901";
+}
+.gangaicons-gauge-dashboard:before {
+  content: "\e902";
+}
+.gangaicons-navigation-menu:before {
+  content: "\e903";
+}
+.gangaicons-login-key-1:before {
+  content: "\e904";
+}
+.gangaicons-login-keys:before {
+  content: "\e905";
+}
+.gangaicons-logout-1:before {
+  content: "\e906";
+}
+.gangaicons-face-id-4:before {
+  content: "\e907";
+}
+.gangaicons-face-id-approved:before {
+  content: "\e908";
+}
+.gangaicons-lock-2:before {
+  content: "\e909";
+}
+.gangaicons-cog:before {
+  content: "\e90a";
+}
+.gangaicons-filtrar:before {
+  content: "\e944";
+}
+.gangaicons-alert-circle:before {
+  content: "\e90b";
+}
+.gangaicons-information-circle:before {
+  content: "\e90c";
+}
+.gangaicons-question-circle:before {
+  content: "\e90d";
+}
+.gangaicons-headphones-customer-support:before {
+  content: "\e90e";
+}
+.gangaicons-time-clock-circle-1:before {
+  content: "\e90f";
+}
+.gangaicons-time-clock-nine:before {
+  content: "\e910";
+}
+.gangaicons-alarm-ring:before {
+  content: "\e911";
+}
+.gangaicons-alarm:before {
+  content: "\e912";
+}
+.gangaicons-alarm-clock:before {
+  content: "\e913";
+}
+.gangaicons-calendar-3:before {
+  content: "\e914";
+}
+.gangaicons-pencil-2:before {
+  content: "\e91b";
+}
+.gangaicons-trash:before {
+  content: "\e948";
+}
+.gangaicons-binocular:before {
+  content: "\e915";
+}
+.gangaicons-search:before {
+  content: "\e916";
+}
+.gangaicons-check-1:before {
+  content: "\e917";
+}
+.gangaicons-check-circle-1:before {
+  content: "\e918";
+}
+.gangaicons-close:before {
+  content: "\e919";
+}
+.gangaicons-remove-circle:before {
+  content: "\e91a";
+}
+.gangaicons-add:before {
+  content: "\e949";
+}
+.gangaicons-subtract:before {
+  content: "\e94a";
+}
+.gangaicons-synchronize-arrow-1:before {
+  content: "\e94b";
+}
+.gangaicons-ordenar:before {
+  content: "\e945";
+}
+.gangaicons-credit-card-1:before {
+  content: "\e91c";
+}
+.gangaicons-receipt-dollar:before {
+  content: "\e91d";
+}
+.gangaicons-products-gift-tag:before {
+  content: "\e91e";
+}
+.gangaicons-taking-pictures-circle:before {
+  content: "\e91f";
+}
+.gangaicons-single-neutral-find:before {
+  content: "\e920";
+}
+.gangaicons-single-neutral:before {
+  content: "\e921";
+}
+.gangaicons-multiple-circle:before {
+  content: "\e922";
+}
+.gangaicons-user-circular:before {
+  content: "\e923";
+}
+.gangaicons-perfil:before {
+  content: "\e924";
+}
+.gangaicons-read-email-at:before {
+  content: "\e925";
+}
+.gangaicons-read-email-circle:before {
+  content: "\e926";
+}
+.gangaicons-phone-circle:before {
+  content: "\e927";
+}
+.gangaicons-phone:before {
+  content: "\e928";
+}
+.gangaicons-chat:before {
+  content: "\e929";
+}
+.gangaicons-conversation-browser:before {
+  content: "\e92a";
+}
+.gangaicons-conversation-chat-bubble:before {
+  content: "\e92b";
+}
+.gangaicons-chat2:before {
+  content: "\e946";
+}
+.gangaicons-noticias:before {
+  content: "\e947";
+}
+.gangaicons-love-it:before {
+  content: "\e92c";
+}
+.gangaicons-rating-star:before {
+  content: "\e92d";
+}
+.gangaicons-mundocartel:before {
+  content: "\e92e";
+}
+.gangaicons-baggage:before {
+  content: "\e92f";
+}
+.gangaicons-plane-1:before {
+  content: "\e930";
+}
+.gangaicons-hotel-bed:before {
+  content: "\e931";
+}
+.gangaicons-hotel-double-bed-1:before {
+  content: "\e932";
+}
+.gangaicons-hotel-double-bed:before {
+  content: "\e933";
+}
+.gangaicons-hotel-single-bed-1:before {
+  content: "\e934";
+}
+.gangaicons-hotel:before {
+  content: "\e935";
+}
+.gangaicons-rating-booklet:before {
+  content: "\e936";
+}
+.gangaicons-checkInOut:before {
+  content: "\e937";
+}
+.gangaicons-consierge:before {
+  content: "\e938";
+}
+.gangaicons-servicios:before {
+  content: "\e939";
+}
+.gangaicons-bathroom-tub-towel:before {
+  content: "\e93a";
+}
+.gangaicons-locker-room-hanger:before {
+  content: "\e93b";
+}
+.gangaicons-disability-wheelchair:before {
+  content: "\e93c";
+}
+.gangaicons-restaurant-fork-knife:before {
+  content: "\e93d";
+}
+.gangaicons-matches-fire:before {
+  content: "\e93e";
+}
+.gangaicons-family-child:before {
+  content: "\e93f";
+}
+.gangaicons-beach-parasol-water:before {
+  content: "\e94e";
+}
+.gangaicons-bus:before {
+  content: "\e940";
+}
+.gangaicons-rentalcar:before {
+  content: "\e941";
+}
+.gangaicons-road-woods:before {
+  content: "\e94f";
+}
+.gangaicons-maps-pin-1:before {
+  content: "\e942";
+}
+.gangaicons-style-three-pin-bed:before {
+  content: "\e943";
+}
+.gangaicons-building-modern-1:before {
+  content: "\e950";
+}
+.gangaicons-building-modern-2:before {
+  content: "\e951";
+}
+.gangaicons-landmark-mountain:before {
+  content: "\e952";
+}
+.gangaicons-arrow-left:before {
+  content: "\e94c";
+}
+.gangaicons-arrow-right:before {
+  content: "\e94d";
+}

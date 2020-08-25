@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="shortcut icon" href="assets/images/favicon.png" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+		<!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+		<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'self'; style-src 'self' 'unsafe-inline'; media-src *; img-src * 'self' data: https:" />
+		<!-- Good default declaration:
+		* gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+		* https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+		* Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+			* Enable inline JS: add 'unsafe-inline' to default-src
+			* Enable eval(): add 'unsafe-eval' to default-src
+		* Create your own at http://cspisawesome.com
+		-->
+		<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+			<link rel="stylesheet" href="assets/css/jquery-ui.css">
+			<link rel="stylesheet" href="assets/css/bootstrap.css">
+			<link rel="stylesheet" href="assets/css/gangafonts.css">
+			<link rel="stylesheet" href="assets/bootstrap-daterangepicker/daterangepicker.css">
+			<link rel="stylesheet" href="assets/css/all.css">
+			<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+			<link rel="stylesheet" href="assets/css/main.css?v=1175363010">
+			<link rel="stylesheet" href="assets/css/responsivo.css?v=1977610421">
+
+			<script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+		<title>Ganga hoteles</title>
+	</head>
+
+	<body>
+		<div class="generalcont">
+			<div class="ventana activa" id="pantalla_bienvenida">
+				<div class="splashCont">
+					<div class="splashCell">
+						<img src="assets/images/apple-touch-icon.png">
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_menu">
+				<header class="row interna">
+					<div class="col-md-12">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-md-12">
+									<a href="#" class="linktopvolver" data-link="pantalla_home"><i class="gangaicons-arrow-left"></i></a>
+									<div class="tituloventana">Bienvenido!</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<div class="contenidomenu">
+					<div class="userblock">
+						<a href="#" class="linkMenu linkcomun" data-link="pantalla_login"><i class="gangaicons-user-circular"></i> Login</a>
+					</div>
+					<ul class="menuitems">
+						<li class="itemmenu"><a class="linkMenu linkcomun" data-link="pantalla_favoritos" href="#"><i class="gangaicons-love-it"></i> Favoritos</a></li>
+						<li class="itemmenu"><a class="linkMenu linkcomun" data-link="pantalla_descubri" href="#"><i class="gangaicons-binocular"></i> Descubrí</a></li>
+						<li class="itemmenu"><a class="linkMenu linkcomun" data-link="pantalla_notificaciones" href="#"><i class="gangaicons-alarm"></i> Notificaciones</a></li>
+						<li class="itemmenu"><a class="linkMenu linkcomun" href="#"><i class="gangaicons-chat"></i> Mensajes</a></li>
+						<li class="itemmenu"><a class="linkMenu linkcomun" href="#"><i class="gangaicons-alert-circle"></i> Políticas de privacidad</a></li>
+						<li class="itemmenu"><a class="linkMenu linkcomun" href="#"><i class="gangaicons-alert-circle"></i> Términos y condiciones</a></li>
+						<li class="itemmenu"><a class="linkMenu linkcomun" href="#"><i class="gangaicons-cog"></i> Configuraciones</a></li>
+						<li class="itemmenu"><a class="linkMenu btnCerrarSession" href="#"><i class="gangaicons-logout-1"></i> Cerrar sesión</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_home">
+				<div class="bototnerasapp">
+					<a href="#" class="btnBotonera" data-link="pantalla_home"><i class="gangaicons-house"></i> Home</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_descubri"><i class="gangaicons-binocular"></i> Descubrí</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_favoritos"><i class="gangaicons-love-it"></i> Favoritos</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_perfil"><i class="gangaicons-perfil"></i> Perfil</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_conserje"><i class="gangaicons-consierge"></i> Consierge</a>
+				</div>
+				<div class="container">
+					<header class="row home">
+						<div class="col-md-12 barramenured">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-6 col-xs-6"><a href="#" class="linklogotop"><img src="assets/images/logotop.png"></a></div>
+									<div class="col-md-6 col-xs-6 linkscontmenu">
+										<a href="#" class="itemMenuTop" data-link="pantalla_notificaciones"><i class="gangaicons-alarm-ring iconnotif"><span class="badge">2</span></i></a>
+										<span class="separador nomobile">|</span>
+										<a href="#menu" class="menuButton itemMenuTop" data-link="pantalla_menu">
+											<i class="gangaicons-navigation-menu"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="linkcomun similboxbuscar" data-link="pantalla_buscar">
+							<div class="col-xs-10">
+								<div class="likeaninput">Buscar</div>
+							</div>
+							<div class="col-xs-1 sinpad"><div class="iconobuscarred"><i class="gangaicons-search"></i></div></div>
+						</div>
+					</header>
+					
+					<div class="row bannerHome">
+						<div class="col-md-12">
+							<div class="titularHome">LA CADENA DE HOTELES LOW-COST</div>
+							<div class="bajadaHeadHome">ES LO QUE TIENE QUE SER Y ES LOW COST.</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="tutuloSecHome">Hoteles recomendados para vos</div>
+						</div>
+						<div id="listadoHotelesHab" class="listadoHotelesHab">
+							<div class="col-xs-6 bloqueHotelResultados">
+								<div class="thumbHotelResultados" style="background-image: url(http://gangahoteles.com/client/uploads/gallery/46405569@2x.png);">
+									<div class="cintaoferta">-%40</div>
+									<a href="#" class="iconLike"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="cajaHotelResultados">
+									<div class="geoHotelResultados">Ciudad de Buenos Aires, Buenos Aires</div>
+									<div class="nombreHotelResultados">Ganga Hotel Recoleta</div>
+									<div class="descHotelResultados">Moderno y cómodo Apart Hotel, con desayuno continental incluido en la tarifa.</div>
+									<div class="precioHotelResultados">Desde 1200.00/noche</div>
+									<div class="ratingsHotelResultados">
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<span class="vostos">7.3 | 23 opiniones</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6 bloqueHotelResultados">
+								<div class="thumbHotelResultados" style="background-image: url(http://gangahoteles.com/client/uploads/gallery/6726327hotel_3.jpg);">
+									<div class="cintaoferta">-%40</div>
+									<a href="#" class="iconLike"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="cajaHotelResultados">
+									<div class="geoHotelResultados">Ciudad de Buenos Aires, Buenos Aires</div>
+									<div class="nombreHotelResultados">Ganga Hotel Conquistador</div>
+									<div class="descHotelResultados">Moderno y cómodo Apart Hotel, con desayuno continental incluido en la tarifa.</div>
+									<div class="precioHotelResultados">Desde 1500.00/noche</div>
+									<div class="ratingsHotelResultados">
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<span class="vostos">7.3 | 23 opiniones</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6 bloqueHotelResultados">
+								<div class="thumbHotelResultados" style="background-image: url(http://gangahoteles.com/client/uploads/gallery/activo-26@2x.png);">
+									<div class="cintaoferta">-%40</div>
+									<a href="#" class="iconLike"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="cajaHotelResultados">
+									<div class="geoHotelResultados">Ciudad de Buenos Aires, Buenos Aires</div>
+									<div class="nombreHotelResultados">Ganga Hotel La linda</div>
+									<div class="descHotelResultados">Ubicado en una de las mejores zonas de la ciudad, rodeado por el encanto...</div>
+									<div class="precioHotelResultados">Desde 1700.00/noche</div>
+									<div class="ratingsHotelResultados">
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<span class="vostos">7.3 | 23 opiniones</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6 bloqueHotelResultados">
+								<div class="thumbHotelResultados" style="background-image: url(http://gangahoteles.com/client/uploads/gallery/46405569@2x.png);">
+									<div class="cintaoferta">-%40</div>
+									<a href="#" class="iconLike"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="cajaHotelResultados">
+									<div class="geoHotelResultados">Ciudad de Buenos Aires, Buenos Aires</div>
+									<div class="nombreHotelResultados">Ganga Hotel Recoleta</div>
+									<div class="descHotelResultados">Moderno y cómodo Apart Hotel, con desayuno continental incluido en la tarifa.</div>
+									<div class="precioHotelResultados">Desde 1200.00/noche</div>
+									<div class="ratingsHotelResultados">
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<span class="vostos">7.3 | 23 opiniones</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row boxOfertonHome">
+								<div class="col-md-6">
+									<div class="logomasterHoriz"></div>
+									<div class="cuotasamarillo"></div>
+									<div class="boxcondiOferHome">
+										<div class="textoLeOferHome">del 30/9 al 20/10<br>En alojamientos</div>
+										<a href="#" class="btnLeOferHome">VER MÁS</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div id="listadoHotelesHab" class="listadoHotelesHab">
+							<div class="col-xs-6 bloqueHotelResultados">
+								<div class="thumbHotelResultados" style="background-image: url(http://gangahoteles.com/client/uploads/gallery/46405569@2x.png);">
+									<div class="cintaoferta">-%40</div>
+									<a href="#" class="iconLike"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="cajaHotelResultados">
+									<div class="geoHotelResultados">Ciudad de Buenos Aires, Buenos Aires</div>
+									<div class="nombreHotelResultados">Ganga Hotel Recoleta</div>
+									<div class="descHotelResultados">Moderno y cómodo Apart Hotel, con desayuno continental incluido en la tarifa.</div>
+									<div class="precioHotelResultados">Desde 1200.00/noche</div>
+									<div class="ratingsHotelResultados">
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<span class="vostos">7.3 | 23 opiniones</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6 bloqueHotelResultados">
+								<div class="thumbHotelResultados" style="background-image: url(http://gangahoteles.com/client/uploads/gallery/6726327hotel_3.jpg);">
+									<div class="cintaoferta">-%40</div>
+									<a href="#" class="iconLike"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="cajaHotelResultados">
+									<div class="geoHotelResultados">Ciudad de Buenos Aires, Buenos Aires</div>
+									<div class="nombreHotelResultados">Ganga Hotel Conquistador</div>
+									<div class="descHotelResultados">Moderno y cómodo Apart Hotel, con desayuno continental incluido en la tarifa.</div>
+									<div class="precioHotelResultados">Desde 1500.00/noche</div>
+									<div class="ratingsHotelResultados">
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<span class="vostos">7.3 | 23 opiniones</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6 bloqueHotelResultados">
+								<div class="thumbHotelResultados" style="background-image: url(http://gangahoteles.com/client/uploads/gallery/activo-26@2x.png);">
+									<div class="cintaoferta">-%40</div>
+									<a href="#" class="iconLike"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="cajaHotelResultados">
+									<div class="geoHotelResultados">Ciudad de Buenos Aires, Buenos Aires</div>
+									<div class="nombreHotelResultados">Ganga Hotel La linda</div>
+									<div class="descHotelResultados">Ubicado en una de las mejores zonas de la ciudad, rodeado por el encanto...</div>
+									<div class="precioHotelResultados">Desde 1700.00/noche</div>
+									<div class="ratingsHotelResultados">
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<span class="vostos">7.3 | 23 opiniones</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6 bloqueHotelResultados">
+								<div class="thumbHotelResultados" style="background-image: url(http://gangahoteles.com/client/uploads/gallery/46405569@2x.png);">
+									<div class="cintaoferta">-%40</div>
+									<a href="#" class="iconLike"><i class="far fa-heart"></i></a>
+								</div>
+								<div class="cajaHotelResultados">
+									<div class="geoHotelResultados">Ciudad de Buenos Aires, Buenos Aires</div>
+									<div class="nombreHotelResultados">Ganga Hotel Recoleta</div>
+									<div class="descHotelResultados">Moderno y cómodo Apart Hotel, con desayuno continental incluido en la tarifa.</div>
+									<div class="precioHotelResultados">Desde 1200.00/noche</div>
+									<div class="ratingsHotelResultados">
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star goldstar"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<span class="vostos">7.3 | 23 opiniones</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="container cajasitio">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="tutuloSecHome">Paquetes pensados para vos</div>
+									</div>
+									<div class="col-md-12">
+										<div class="owl-carousel carrCiudades">
+											<div class="item">
+												<div class="fotoCiudCar tipoTabla2" style="background-image: url(assets/images/fondoMendoza.jpg);">
+													<div class="tipoTablaCel nombreCiudadH">MENDOZA</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="fotoCiudCar tipoTabla2" style="background-image: url(assets/images/fondoBsAs.jpg);">
+													<div class="tipoTablaCel nombreCiudadH">BUENOS<BR>AIRES</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="fotoCiudCar tipoTabla2" style="background-image: url(assets/images/fondoTucuman.jpg);">
+													<div class="tipoTablaCel nombreCiudadH">TUCUMAN</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="fotoCiudCar tipoTabla2" style="background-image: url(assets/images/fondoUshuaia.jpg);">
+													<div class="tipoTablaCel nombreCiudadH">USHUAIA</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="fotoCiudCar tipoTabla2" style="background-image: url(assets/images/fondoMendoza.jpg);">
+													<div class="tipoTablaCel nombreCiudadH">MENDOZA</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="fotoCiudCar tipoTabla2" style="background-image: url(assets/images/fondoBsAs.jpg);">
+													<div class="tipoTablaCel nombreCiudadH">BUENOS<BR>AIRES</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="fotoCiudCar tipoTabla2" style="background-image: url(assets/images/fondoTucuman.jpg);">
+													<div class="tipoTablaCel nombreCiudadH">TUCUMAN</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="fotoCiudCar tipoTabla2" style="background-image: url(assets/images/fondoUshuaia.jpg);">
+													<div class="tipoTablaCel nombreCiudadH">USHUAIA</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div id="slideofertasminihome" class="carousel slide" data-ride="carousel">
+								<!-- Indicators -->
+								<ol class="carousel-indicators">
+									<li data-target="#slideofertasminihome" data-slide-to="0" class="active"></li>
+									<li data-target="#slideofertasminihome" data-slide-to="1"></li>
+									<li data-target="#slideofertasminihome" data-slide-to="2"></li>
+									<li data-target="#slideofertasminihome" data-slide-to="4"></li>
+								</ol>
+
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner" role="listbox">
+									<div class="item active">
+										<div class="itemcarruhomepromo" style="background-image: url(assets/images/fotopromo_3.jpg"></div>
+									</div>
+									<div class="item">
+										<div class="itemcarruhomepromo" style="background-image: url(assets/images/fotopromo_4.jpg"></div>
+									</div>
+									<div class="item">
+										<div class="itemcarruhomepromo" style="background-image: url(assets/images/fotopromo_2.jpg"></div>
+									</div>
+									<div class="item">
+										<div class="itemcarruhomepromo" style="background-image: url(assets/images/fotopromo_1.jpg"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="container cajasitio">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="tutuloSecHome">Somos mucho más que hoteles</div>
+									</div>
+									<div class="col-md-12">
+										<div class="owl-carousel carrHoteles">
+											<div class="item">
+												<div class="fndMuchomas fndPasajes"></div>
+												<div class="titMuchamas iconPasajesHS">Pasajes</div>
+												<div class="txtMuchamas">Aereos y buses para ir a todos los Ganga Hoteles</div>
+											</div>
+											<div class="item">
+												<div class="fndMuchomas fndExperiencias"></div>
+												<div class="titMuchamas iconExperienciasHS">Experiencias</div>
+												<div class="txtMuchamas">Hacé de tu viaje una experiencia inolvidable</div>
+											</div>
+											<div class="item">
+												<div class="fndMuchomas fndRentalCar"></div>
+												<div class="titMuchamas iconRentalCarHS">Rental Car</div>
+												<div class="txtMuchamas">Sentí la libertad de vivir tu propia aventura, tus tiempos los manejás vos.</div>
+											</div>
+											<div class="item">
+												<div class="fndMuchomas fndTraslados"></div>
+												<div class="titMuchamas iconTransladosHS">Traslados</div>
+												<div class="txtMuchamas">Hacé de tu viaje una experiencia inolvidable</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_buscar">
+				<div class="bototnerasapp">
+					<a href="#" class="btnBotonera" data-link="pantalla_home"><i class="gangaicons-house"></i> Home</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_descubri"><i class="gangaicons-binocular"></i> Descubrí</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_favoritos"><i class="gangaicons-love-it"></i>Favoritos</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_perfil"><i class="gangaicons-perfil"></i>Perfil</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_conserje"><i class="gangaicons-consierge"></i>Conserje</a>
+				</div>
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_home"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Encontrá tu hotel</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="row">
+						<div class="selectorTipo">
+							ESTADÍA <div class="selectotrGanga"></div> MICROESTADÍA
+						</div>
+						<div class="col-md-12">
+							<div class="formHomeBus" id="formestadia">
+								<form id="formEstadia" autocomplete="off" method="POST">
+									<div class="form-group">
+										<label for="lugar">DESTINO</label>
+										<input name="lugar" id="lugar" autocomplete="nope" placeholder="Ingresa ciudad" class="form-control iconTimbre">
+									</div>
+									<input type="hidden" name="tipoBus" id="tipoBus" value="estadia">
+									<input type="hidden" id="lugar_v" name="lugar_v">
+									<div class="form-group">
+										<label style="display: block;">FECHAS</label>
+										<input name="llegada" id="llegada" placeholder="Llegada" class="form-control iconCalendar">
+										<input name="salida" id="salida" placeholder="Salida" class="form-control iconCalendar">
+									</div>
+									<div class="form-group">
+										<label style="display: block;">Habitaciones</label>
+										<select name="camas" id="camas" class="slectorBus iconBed">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+										<select name="pax" id="pax" class="slectorBus iconPax">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<button class="btn-ganga-red col-md-2 btnGangaCenter" id="btnBuscarEstadia">Buscar</button>
+								</form>
+							</div>
+							<div class="formHomeBus hidden" id="formmicroestadia">
+								<form id="formMicroestadia" autocomplete="off" method="POST" action="/Busqueda/">
+									<div class="form-group">
+										<label for="lugar">DESTINO</label>
+										<input name="lugar" id="lugar2" autocomplete="nope" placeholder="Ingresa ciudad" class="form-control iconTimbre">
+									</div>
+									<input type="hidden" name="tipoBus" id="tipoBus" value="microestadia">
+									<input type="hidden" id="lugar_v2" name="lugar_v">
+									<div class="form-group">
+										<label style="display: block;">FECHAS</label>
+										<input name="llegada" id="llegada2" placeholder="Llegada" class="form-control iconCalendar">
+										<select name="horas" id="horas" class="slectorBus iconCalendar">
+											<option value="x">Horas</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label style="display: block;">Habitaciones</label>
+										<select name="camas" id="camas" class="slectorBus iconBed">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+										<select name="pax" id="pax" class="slectorBus iconPax">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<button class="btn-ganga-red col-md-2 btnGangaCenter" id="btnBuscarMicroEstadia">Buscar</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_resultados">
+				<div class="bototnerasappRed dropup">
+					<a href="#" class="btnBotonera"><i class="gangaicons-mundocartel"></i> Mapa</a>
+					<a href="#" class="btnBotonera2" data-toggle="dropdown"><i class="gangaicons-ordenar"></i> Ordenar</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_filtros"><i class="gangaicons-filtrar"></i>Filtrar</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">Precio de menor a mayor</a></li>
+						<li><a href="#">Precio de mayor a menor</a></li>
+						<li><a href="#">Recomendaciones de mayor a menor</a></li>
+						<li><a href="#">Recomendaciones de menor a mayor</a></li>
+					</ul>
+				</div>
+				
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_buscar"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Hoteles</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="row boxresultadosresumen">
+						<div class="col-md-12">
+							<div class="resultadoCiudad"><img src="assets/images/iconTimbreR.png"> Buenos Aires, Argentina</div>
+							<div class="resultadoFecha">
+								<img src="assets/images/iconCalendar.png"> 17/04/2020 | 26/04/2020 <img src="assets/images/iconPax.png"> 1 <img src="assets/images/iconBed.png"> 1
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 borxResultadosSearch">
+							<div class="resultadosToolsBox">
+								<div class="ordenpag">
+									<span class="totRes">Mostrando 3 de 3 coincidencias</span>
+								</div>
+							</div>
+							<div id="listadoHotelesHab" class="listadoHotelesHab">
+								<div class="row bloqueHotelResultados">
+									<div class="col-md-5">
+										<div class="thumbHotelResultados" style="background-image: url(http://gangahoteles.com/client/uploads/gallery/46405569@2x.png);">
+											<div class="cintaoferta">-%40</div>
+											<a href="#" class="iconLike"><i class="far fa-heart"></i></a>
+										</div>
+									</div>
+									<div class="col-md-7 cajaHotelResultados">
+										<div class="geoHotelResultados">Ciudad de Buenos Aires, Buenos Aires</div>
+										<div class="nombreHotelResultados">Ganga Hotel Recoleta</div>
+										<div class="descHotelResultados">Moderno y cómodo Apart Hotel, con desayuno continental incluido en la tarifa.</div>
+										<div class="precioHotelResultados">Desde 1200.00/noche</div>
+										<div class="ratingsHotelResultados">
+											<i class="fa fa-star goldstar"></i>
+											<i class="fa fa-star goldstar"></i>
+											<i class="fa fa-star goldstar"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<span class="vostos">7.3 | 23 opiniones</span>
+										</div>
+										<div class="extrasHotelResultados">
+											<div class="hotelExtraIcon iconHotelC_1"></div>
+											<div class="hotelExtraIcon iconHotelC_2"></div>
+											<div class="hotelExtraIcon iconHotelC_3"></div>
+											<div class="hotelExtraIcon iconHotelC_4"></div>
+										</div>
+										<div class="boxLegalHotelResultados">
+											Pagá en el alojamiento o hasta en 12 cuotas sin interés<br>
+											<a href="#" class="linkLegalHotelResultados">Ver bancos y tarjetas</a>
+										</div>
+										<a href="#" data-link="pantalla_hoteles" class="btnMasHotelResultados linkderecho">MAS</a>
+									</div>
+								</div>
+								<div class="row bloqueHotelResultados">
+									<div class="col-md-5">
+										<div class="thumbHotelResultados" style="background-image: url(http://gangahoteles.com/client/uploads/gallery/6726327hotel_3.jpg);">
+											<div class="cintaoferta">-%40</div>
+											<a href="#" class="iconLike"><i class="far fa-heart"></i></a>
+										</div>
+									</div>
+									<div class="col-md-7 cajaHotelResultados">
+										<div class="geoHotelResultados">Ciudad de Buenos Aires, Buenos Aires</div>
+										<div class="nombreHotelResultados">Ganga Hotel Conquistador</div>
+										<div class="descHotelResultados">Moderno y cómodo Apart Hotel, con desayuno continental incluido en la tarifa.</div>
+										<div class="precioHotelResultados">Desde 1500.00/noche</div>
+										<div class="ratingsHotelResultados">
+											<i class="fa fa-star goldstar"></i>
+											<i class="fa fa-star goldstar"></i>
+											<i class="fa fa-star goldstar"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<span class="vostos">7.3 | 23 opiniones</span>
+										</div>
+										<div class="extrasHotelResultados">
+											<div class="hotelExtraIcon iconHotelC_1"></div>
+											<div class="hotelExtraIcon iconHotelC_2"></div>
+											<div class="hotelExtraIcon iconHotelC_3"></div>
+											<div class="hotelExtraIcon iconHotelC_4"></div>
+										</div>
+										<div class="boxLegalHotelResultados">
+											Pagá en el alojamiento o hasta en 12 cuotas sin interés<br>
+											<a href="#" class="linkLegalHotelResultados">Ver bancos y tarjetas</a>
+										</div>
+										<a href="#" data-link="pantalla_hoteles" class="btnMasHotelResultados linkderecho">MAS</a>
+									</div>
+								</div>
+								<div class="row bloqueHotelResultados">
+									<div class="col-md-5">
+										<div class="thumbHotelResultados" style="background-image: url(http://gangahoteles.com/client/uploads/gallery/activo-26@2x.png);">
+											<div class="cintaoferta">-%40</div>
+											<a href="#" class="iconLike"><i class="far fa-heart"></i></a>
+										</div>
+									</div>
+									<div class="col-md-7 cajaHotelResultados">
+										<div class="geoHotelResultados">Ciudad de Buenos Aires, Buenos Aires</div>
+										<div class="nombreHotelResultados">Ganga Hotel La linda</div>
+										<div class="descHotelResultados">Ubicado en una de las mejores zonas de la ciudad, rodeado por el encanto...</div>
+										<div class="precioHotelResultados">Desde 1700.00/noche</div>
+										<div class="ratingsHotelResultados">
+											<i class="fa fa-star goldstar"></i>
+											<i class="fa fa-star goldstar"></i>
+											<i class="fa fa-star goldstar"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<span class="vostos">7.3 | 23 opiniones</span>
+										</div>
+										<div class="extrasHotelResultados">
+											<div class="hotelExtraIcon iconHotelC_1"></div>
+											<div class="hotelExtraIcon iconHotelC_2"></div>
+											<div class="hotelExtraIcon iconHotelC_3"></div>
+											<div class="hotelExtraIcon iconHotelC_4"></div>
+										</div>
+										<div class="boxLegalHotelResultados">
+											Pagá en el alojamiento o hasta en 12 cuotas sin interés<br>
+											<a href="#" class="linkLegalHotelResultados">Ver bancos y tarjetas</a>
+										</div>
+										<a href="#" data-link="pantalla_hoteles" class="btnMasHotelResultados linkderecho">MAS</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="container cajasitio">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="tutuloSecHome">Que podes hacer en Buenos Aires</div>
+									</div>
+									<div class="col-md-12">
+										<div class="owl-carousel carrHoteles">
+											<div class="item">
+												<div class="imagenqPHBlock" style="background-image: url(http://gangahoteles.com/assets/images/fotopromo_1.jpg);"></div>
+												<div class="tituloqPHBlock">Tour en bicicleta por el norte o el sur de Buenos Aires</div>
+											</div>
+											<div class="item">
+												<div class="imagenqPHBlock" style="background-image: url(http://gangahoteles.com/assets/images/fotopromo_2.jpg);"></div>
+												<div class="tituloqPHBlock">Tour del Papa Francisco de Buenos Aires</div>
+											</div>
+											<div class="item">
+												<div class="imagenqPHBlock" style="background-image: url(http://gangahoteles.com/assets/images/fotopromo_3.jpg);"></div>
+												<div class="tituloqPHBlock">Citytour por Buenos Aires y comida en el restaurante</div>
+											</div>
+											<div class="item">
+												<div class="imagenqPHBlock" style="background-image: url(http://gangahoteles.com/assets/images/fotopromo_4.jpg);"></div>
+												<div class="tituloqPHBlock">Paseo en barco por el Río de la Plata</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_filtros">				
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_resultados"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Filtros</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="titFiltro">Precio por noche</div>
+							<div class="rangocont">$600 - $6000</div>
+							<div id="rangePrecio" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 6%; width: 54%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 6%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 60%;"></span></div>
+						</div>
+						<div class="col-md-12">
+							<div class="titFiltro">Perfil de viaje</div>
+							<ul>
+								<li>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="perfil_1" checked="">
+										<label class="custom-control-label" for="perfil_1">Todos</label>
+									</div>
+								</li>
+								<li>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="perfil_2">
+										<label class="custom-control-label" for="perfil_2">Familiar</label>
+									</div>
+								</li>
+								<li>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="perfil_3">
+										<label class="custom-control-label" for="perfil_3">Shopping</label>
+									</div>
+								</li>
+								<li>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="perfil_4">
+										<label class="custom-control-label" for="perfil_4">Solos y solas</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-12">
+							<div class="titFiltro">Ofertas</div>
+							<ul>
+								<li>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="ofertas_1" checked="">
+										<label class="custom-control-label" for="ofertas_1">Todos</label>
+									</div>
+								</li>
+								<li>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="ofertas_2">
+										<label class="custom-control-label" for="ofertas_2">10%</label>
+									</div>
+								</li>
+								<li>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="ofertas_3">
+										<label class="custom-control-label" for="ofertas_3">20%</label>
+									</div>
+								</li>
+								<li>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="ofertas_4">
+										<label class="custom-control-label" for="ofertas_4">Promo</label>
+									</div>
+								</li>
+								<li>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="ofertas_5">
+										<label class="custom-control-label" for="ofertas_5">Paquete</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-14">
+							<div class="titFiltro">Alternativas de pago</div>
+							<ul>
+								<li>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="tipo_pago_1" checked="">
+										<label class="custom-control-label" for="tipo_pago_1">Todas las formas</label>
+									</div>
+								</li>
+								<li>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="tipo_pago_2">
+										<label class="custom-control-label" for="tipo_pago_2">En cuotas</label>
+									</div>
+								</li>
+								<li>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="tipo_pago_3">
+										<label class="custom-control-label" for="tipo_pago_3">En una cuota</label>
+									</div>
+								</li>
+								<li>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="tipo_pago_4">
+										<label class="custom-control-label" for="tipo_pago_4">Pago en el alojamiento</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_hoteles">				
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_resultados"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Hoteles</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="boxPrecio">
+						<div class="descPrecio">
+							9 noches | 1 personas
+						</div>
+						<div class="contPrecio">
+							<div class="precioFin">
+								$<span id="precioResumen">22053600</span>
+								<div class="txtPrecioTR">Impuestos incluidos</div>
+							</div>
+						</div>
+						<a href="#" class="btnSiguiente linkderecho" data-link="pantalla_configura">SIGUIENTE</a>
+					</div>
+					<div class="row tabasa">
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#detalle_hotel" aria-controls="profile" role="tab" data-toggle="tab">Descripción</a></li>
+							<li role="presentation"><a href="#detalle_habita" aria-controls="profile" role="tab" data-toggle="tab">Habitaciones</a></li>
+						</ul>
+
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="detalle_hotel">
+								
+								<div class="col-md-12">
+									<div class="thumbHotelResultadosApp" style="background-image: url(http://gangahoteles.com/client/uploads/gallery/activo-26@2x.png);">
+										<div class="cintaoferta">-%40</div>
+										<a href="#" class="iconLike"><i class="far fa-heart"></i></a>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="boxInfoHotelBig">
+										<div class="geoHotelResultados">Ciudad de Buenos Aires, Buenos Aires</div>
+										<div class="ratingsHotelResultados">
+											<i class="fa fa-star goldstar"></i>
+											<i class="fa fa-star goldstar"></i>
+											<i class="fa fa-star goldstar"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<span class="vostos">7.3 | 23 opiniones</span>
+										</div>
+										<div class="nombreHotelResultados">Ganga Hotel Recoleta</div>
+										<div class="descHotelResultados">Moderno y cómodo Apart Hotel, con desayuno continental incluido en la tarifa.</div>
+										<div class="row amenitiescont">
+																					<div class="col-md-4">
+												<div class="amenitieblock" style="background-image: url(assets/images/data/iconDesayuno.png)">Desayuno</div>
+											</div>
+																					<div class="col-md-4">
+												<div class="amenitieblock" style="background-image: url(assets/images/data/iconSetBano.png)">Set de baño</div>
+											</div>
+																					<div class="col-md-4">
+												<div class="amenitieblock" style="background-image: url(assets/images/data/iconWifi.png)">WiFi</div>
+											</div>
+																				</div>
+										<div class="condicionesTit">Condiciones del alojamiento</div>
+										<div class="row">
+											<div class="col-md-4"><div class="tituloCondiTip iconHorarios">Horarios</div></div>
+											<div class="col-md-4"><div class="condicionesTxt iconCheckin">Horario de Check in: 00:00:00</div></div>
+											<div class="col-md-4"><div class="condicionesTxt iconCheckout">Horario de Check out: 00:00:00</div></div>
+										</div>
+																			<div class="row">
+											<div class="col-md-4"><div class="tituloCondiTip iconDesayuno">Desayuno</div></div>
+											<div class="col-md-4"><div class="condicionesTxt">07:00 - 10:30</div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="detalle_habita">
+								<div id="contenidoResHabit">
+									<div class="col-md-12">
+										<div class="owl-carousel carrHabitaciones">
+											<div class="item">
+												<div class="row">
+													<div class="col-xs-4">
+														<div class="fotoHabitacionMini" style="background-image: url(http://gangahoteles.com/client/uploads/gallery/46405569@2x.png);">
+														</div>
+													</div>
+													<div class="col-xs-8">
+														<div class="tipohabitacion">1 Habitación</div>
+														<div class="tipohabitacion multiper">1 PERSONA</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<div class="descHabitRes">Bañera / Televisión por satélite/cable / Secador de Cabello / Armario/ropero</div>
+													</div>
+												</div>
+												<div class="row cajainfoHabit" data-precio="22053600" data-camas="1">
+													<div class="col-md-2">
+														<div class="tipohabitacion multiper">1 x habitación</div>
+													</div>
+													<div class="col-md-4">
+														<div class="precioResHabita">$ 22053600</div>
+														<div class="cantidadDsipHabita"><i class="fa fa-fire"></i> Últimas 3 habitaciones</div>
+														<div class="cmboTextoResHab greenText"><i class="fa fa-check"></i> <div class="contecombottexthab">Desayuno buffet</div></div>
+													</div>
+													<div class="col-md-4">
+														<div class="cantidadDsipHabita"><div class="iconTarjeta"></div> <div class="textotarjetreshabi">Pagá con tarjeta y en coutas</div></div>
+														<div class="cmboTextoResHab greenText"><i class="fa fa-check"></i> <div class="contecombottexthab">Podés cancelar gratis hasta el 08/12/2020 a las 14:00</div></div>
+													</div>
+													<div class="col-md-2">
+														<label class="selectorGanga" for="habitacion_14_2">
+															<input type="radio" name="selectedRoom" id="habitacion_14_1" value="14">
+															<span></span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="row">
+													<div class="col-xs-4">
+														<div class="fotoHabitacionMini" style="background-image: url(http://gangahoteles.com/client/uploads/gallery/46405569@2x.png);">
+														</div>
+													</div>
+													<div class="col-xs-8">
+														<div class="tipohabitacion">1 Habitación</div>
+														<div class="tipohabitacion multiper">1 PERSONA</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<div class="descHabitRes">Bañera / Televisión por satélite/cable / Secador de Cabello / Armario/ropero</div>
+													</div>
+												</div>
+												<div class="row cajainfoHabit" data-precio="22053600" data-camas="1">
+													<div class="col-md-2">
+														<div class="tipohabitacion multiper">1 x habitación</div>
+													</div>
+													<div class="col-md-4">
+														<div class="precioResHabita">$ 22053600</div>
+														<div class="cantidadDsipHabita"><i class="fa fa-fire"></i> Últimas 3 habitaciones</div>
+														<div class="cmboTextoResHab greenText"><i class="fa fa-check"></i> <div class="contecombottexthab">Desayuno buffet</div></div>
+													</div>
+													<div class="col-md-4">
+														<div class="cantidadDsipHabita"><div class="iconTarjeta"></div> <div class="textotarjetreshabi">Pagá con tarjeta y en coutas</div></div>
+														<div class="cmboTextoResHab redText"><i class="fa fa-check"></i> <div class="contecombottexthab">No podés cancelar ni realizar cambios</div></div>
+													</div>
+													<div class="col-md-2">
+														<label class="selectorGanga" for="habitacion_14_2">
+															<input type="radio" name="selectedRoom" id="habitacion_14_2" value="14">
+															<span></span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="row">
+													<div class="col-xs-4">
+														<div class="fotoHabitacionMini" style="background-image: url(http://gangahoteles.com/client/uploads/gallery/46405569@2x.png);">
+														</div>
+													</div>
+													<div class="col-xs-8">
+														<div class="tipohabitacion">1 Habitación</div>
+														<div class="tipohabitacion multiper">1 PERSONA</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<div class="descHabitRes">Bañera / Televisión por satélite/cable / Secador de Cabello / Armario/ropero</div>
+													</div>
+												</div>
+												<div class="row cajainfoHabit" data-precio="22053600" data-camas="1">
+													<div class="col-md-2">
+														<div class="tipohabitacion multiper">1 x habitación</div>
+													</div>
+													<div class="col-md-4">
+														<div class="precioResHabita">$ 22053600</div>
+														<div class="cantidadDsipHabita"><i class="fa fa-fire"></i> Últimas 3 habitaciones</div>
+														<div class="cmboTextoResHab greenText"><i class="fa fa-check"></i> <div class="contecombottexthab">Desayuno buffet</div></div>
+													</div>
+													<div class="col-md-4">
+														<div class="cantidadDsipHabita"><div class="iconAlojamiento"></div> <div class="textotarjetreshabi">Pagá en el hotel</div></div>
+														<div class="cmboTextoResHab redText"><i class="fa fa-check"></i> <div class="contecombottexthab">No podés cancelar ni realizar cambios</div></div>
+													</div>
+													<div class="col-md-2">
+														<label class="selectorGanga" for="habitacion_14_2">
+															<input type="radio" name="selectedRoom" id="habitacion_14_3" value="14">
+															<span></span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="row">
+													<div class="col-xs-4">
+														<div class="fotoHabitacionMini" style="background-image: url(http://gangahoteles.com/client/uploads/gallery/46405569@2x.png);">
+														</div>
+													</div>
+													<div class="col-xs-8">
+														<div class="tipohabitacion">1 Habitación</div>
+														<div class="tipohabitacion multiper">1 PERSONA</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<div class="descHabitRes">Bañera / Televisión por satélite/cable / Secador de Cabello / Armario/ropero</div>
+													</div>
+												</div>
+												<div class="row cajainfoHabit" data-precio="22053600" data-camas="1">
+													<div class="col-md-2">
+														<div class="tipohabitacion multiper">1 x habitación</div>
+													</div>
+													<div class="col-md-4">
+														<div class="precioResHabita">$ 22053600</div>
+														<div class="cantidadDsipHabita"><i class="fa fa-fire"></i> Últimas 3 habitaciones</div>
+														<div class="cmboTextoResHab greenText"><i class="fa fa-check"></i> <div class="contecombottexthab">Desayuno buffet</div></div>
+													</div>
+													<div class="col-md-4">
+														<div class="cantidadDsipHabita"><div class="iconTarjeta"></div> <div class="textotarjetreshabi">Pagá con tarjeta y en coutas</div></div>
+														<div class="cmboTextoResHab greenText"><i class="fa fa-check"></i> <div class="contecombottexthab">Podés cancelar gratis hasta el 08/12/2020 a las 14:00</div></div>
+													</div>
+													<div class="col-md-2">
+														<label class="selectorGanga" for="habitacion_14_2">
+															<input type="radio" name="selectedRoom" id="habitacion_14_4" value="14">
+															<span></span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="container cajasitio">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="tutuloSecHome">Que podes hacer en Buenos Aires</div>
+									</div>
+									<div class="col-md-12">
+										<div class="owl-carousel carrHoteles">
+											<div class="item">
+												<div class="imagenqPHBlock" style="background-image: url(http://gangahoteles.com/assets/images/fotopromo_1.jpg);"></div>
+												<div class="tituloqPHBlock">Tour en bicicleta por el norte o el sur de Buenos Aires</div>
+											</div>
+											<div class="item">
+												<div class="imagenqPHBlock" style="background-image: url(http://gangahoteles.com/assets/images/fotopromo_2.jpg);"></div>
+												<div class="tituloqPHBlock">Tour del Papa Francisco de Buenos Aires</div>
+											</div>
+											<div class="item">
+												<div class="imagenqPHBlock" style="background-image: url(http://gangahoteles.com/assets/images/fotopromo_3.jpg);"></div>
+												<div class="tituloqPHBlock">Citytour por Buenos Aires y comida en el restaurante</div>
+											</div>
+											<div class="item">
+												<div class="imagenqPHBlock" style="background-image: url(http://gangahoteles.com/assets/images/fotopromo_4.jpg);"></div>
+												<div class="tituloqPHBlock">Paseo en barco por el Río de la Plata</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_configura">				
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_hoteles"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Configura tu estadía</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="col-md-12 confHabitacionesRes">
+						<div class="descConfEstadia">
+							<div class="row">
+								<div class="col-md-4">	
+									<div class="boxExtraDe">		
+										<div class="descExtra">Estacionamiento<br>Desde $150</div>
+										<div class="slectorExtra">
+											<label class="selectorGanga" for="extraHotelData_0">
+												<input type="checkbox" name="extraHotelData" id="extraHotelData_0" data-valuei="0" value="3">
+												<span></span>
+											</label>
+										</div>	
+									</div>
+								</div>
+								<div class="col-md-4">	
+									<div class="boxExtraDe">		
+										<div class="descExtra">Limpieza diaria<br>Desde $80</div>
+										<div class="slectorExtra">
+											<label class="selectorGanga" for="extraHotelData_1">
+												<input type="checkbox" name="extraHotelData" id="extraHotelData_1" data-valuei="1" value="2">
+												<span></span>
+											</label>
+										</div>	
+									</div>	
+								</div>
+								<div class="col-md-4">	
+									<div class="boxExtraDe">		
+										<div class="descExtra">Productos del baño<br>Desde $20</div>		
+										<div class="slectorExtra">
+											<label class="selectorGanga" for="extraHotelData_2">
+												<input type="checkbox" name="extraHotelData" id="extraHotelData_2" data-valuei="2" value="1">
+												<span></span>
+											</label>
+										</div>	
+									</div>											
+								</div>												
+							</div>
+						</div>												
+						<div class="buttonConfEstadia text-center">												
+							<a href="#" class="btnRedGangaBig linkcomun" data-link="pantalla_pagar_reserva" id="btnConfirmarReserva">CONTINUAR</a>
+						</div>											
+						<div class="buttonConfEstadia text-center">												
+							<a href="#" class="btnRedGangaBigInv linkcomun" data-link="pantalla_hoteles" id="btnConfirmarReserva">CANCELAR</a>
+						</div>										
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_pagar_reserva">				
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_configura"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Reeservar</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<img src="assets/images/Pago-Reserva.jpg">
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_descubri">		
+				<div class="bototnerasapp">
+					<a href="#" class="btnBotonera" data-link="pantalla_home"><i class="gangaicons-house"></i> Home</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_descubri"><i class="gangaicons-binocular"></i> Descubrí</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_favoritos"><i class="gangaicons-love-it"></i>Favoritos</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_perfil"><i class="gangaicons-perfil"></i>Perfil</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_conserje"><i class="gangaicons-consierge"></i>Conserje</a>
+				</div>		
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_home"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Descubrí</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="row">
+						<div class="col-xs-6">
+							<input name="entrada_descubri" id="entrada_descubri" placeholder="Entrada" class="form-control iconCalendar al100">
+						</div>
+						<div class="col-xs-6">
+							<input name="salida_descubri" id="salida_descubri" placeholder="Salida" class="form-control iconCalendar al100">
+						</div>
+						<div class="col-xs-12 fondoExperiencias">
+							<div class="tipoTabla">
+								<div class="tipoTablaCel">
+									<div class="titExper">DESCUBRI</div>
+									<div class="copyExper">ENCONTRÁ TU MEJOR ALOJAMIENTO GANGA A TRAVÉS DE LAS EXPERIENCIAS QUE QUIERAS VIVIR</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12">
+							<div class="butExp"><button class="btn-ganga-red">EXPLORAR</button></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_favoritos">	
+				<div class="bototnerasapp">
+					<a href="#" class="btnBotonera" data-link="pantalla_home"><i class="gangaicons-house"></i> Home</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_descubri"><i class="gangaicons-binocular"></i> Descubrí</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_favoritos"><i class="gangaicons-love-it"></i>Favoritos</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_perfil"><i class="gangaicons-perfil"></i>Perfil</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_conserje"><i class="gangaicons-consierge"></i>Conserje</a>
+				</div>			
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_home"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Favoritos</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="notlogedcont">
+						No estás logueado.<br>
+						Para poder acceder a esta sección debes estar logueado.<br>
+						<div class="form-group">
+							<button class="btnGangaBig top45 linkcomun" data-link="pantalla_login">Login</button>
+						</div>
+					</div>
+					<div class="contenidoseccion">
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_perfil">	
+				<div class="bototnerasapp">
+					<a href="#" class="btnBotonera" data-link="pantalla_home"><i class="gangaicons-house"></i> Home</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_descubri"><i class="gangaicons-binocular"></i> Descubrí</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_favoritos"><i class="gangaicons-love-it"></i>Favoritos</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_perfil"><i class="gangaicons-perfil"></i>Perfil</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_conserje"><i class="gangaicons-consierge"></i>Conserje</a>
+				</div>			
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_home"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Perfil</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="notlogedcont">
+						No estás logueado.<br>
+						Para poder acceder a esta sección debes estar logueado.<br>
+						<div class="form-group">
+							<button class="btnGangaBig top45 linkcomun" data-link="pantalla_login">Login</button>
+						</div>
+					</div>
+					<div class="contenidoseccion">
+						<div class="row">
+							<div class="col-md-8 paddtop25">
+								<div class="titconfcompra">Mi perfil</div>
+								<div class="boxgangares">
+									<div class="userboxinfo">
+										<div class="imguser" style="background-image: url(/assets/images/iconGangaP.png);"></div>
+										<div class="emailuser">franciscojad@gmail.com</div>
+									</div>
+									<a href="#" class="btn-ganga-red rounded btnEditar floatright-topo">EDITAR</a>
+								</div>
+								<div class="boxgangares_sb row">
+									<div class="titconfcompra">Datos personales</div>
+									<div class="selectorconteiner">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="nombrereserv">Nombres</label>
+												<div class="subseccperfil">Como figura en el documento de viaje</div>
+												<input type="text" name="nombrereserv" id="nombrereserv" class="form-control" value="Francisco">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="apellidoreserv">Apellidos</label>
+												<div class="subseccperfil">Como figura en el documento de viaje</div>
+												<input type="text" name="apellidoreserv" id="apellidoreserv" class="form-control" value="Alvariño">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="nombrereserv">Fecha de naciemiento</label>
+												<input type="text" name="nombrereserv" id="nombrereserv" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="apellidoreserv">Sexo</label>
+												
+												<div class="selectorconteiner col-xs-6 padlr-6">
+													<label for="sexo_perfil_F">
+														<div class="selectorGanga selectorReserva">
+															<input type="radio" name="sexo_perfil" id="sexo_perfil_F" value="F">
+															<span></span>
+														</div>
+														<div class="textoinputlabel_b">Femenino</div>
+													</label>
+												</div>
+												<div class="selectorconteiner col-xs-6 padlr-6">
+													<label class="" for="sexo_perfil_M">
+														<div class="selectorGanga selectorReserva">
+															<input type="radio" name="sexo_perfil" id="sexo_perfil_M" value="M" checked="checked">
+															<span></span>
+														</div>
+														<div class="textoinputlabel_b">Masculino</div>
+													</label>
+												</div>
+											</div>
+										</div>
+										<a href="#" class="btn-ganga-red rounded btnEditar">Guardar</a>
+									</div>
+								</div>
+								<div class="boxgangares_sb row">
+									<div class="titconfcompra">Teléfonos</div>
+									<div class="selectorconteiner">
+										<div class="col-xs-3">
+											<div class="form-group">
+												<label for="nombrereserv">Codigo de país</label>
+												<input type="text" name="nombrereserv" id="nombrereserv" class="form-control">
+											</div>
+										</div>
+										<div class="col-xs-3">
+											<div class="form-group">
+												<label for="nombrereserv">Codigo de área</label>
+												<input type="text" name="nombrereserv" id="nombrereserv" class="form-control">
+											</div>
+										</div>
+										<div class="col-xs-6">
+											<div class="form-group">
+												<label for="nombrereserv">Número de teléfono</label>
+												<input type="text" name="nombrereserv" id="nombrereserv" class="form-control">
+											</div>
+										</div>
+										<div class="col-xs-12">
+											<div class="gusgfraba">Agregá tus teléfonos para que podamos contactarte en caso que ocurra algún cambio.</div>
+										</div>
+										<div class="col-xs-12">
+											<a href="#" class="btn-ganga-red rounded btnEditar">Agregar nuevo</a>
+										</div>
+									</div>
+								</div>
+								<div class="boxgangares_sb row">
+									<div class="titconfcompra">Emails</div>
+									<div class="selectorconteiner">
+										<div class="col-xs-12">
+											<div class="gusgfraba">Agregá los emails con los que compraste para ver todas tus reservas en Mis Viajes.</div>
+										</div>
+										<div class="col-xs-9 superfont26 colorganga mt20">
+											franciscojad@gmail.com										</div>
+										<div class="col-xs-3 text-right">
+											Verificado • Principal
+										</div>
+										<div class="col-md-12 mt20">
+											<div class="form-group">
+												<label for="nombrereserv">Agregar Email</label>
+												<input type="text" name="nombrereserv" id="nombrereserv" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-12">
+											<a href="#" class="btn-ganga-red rounded btnEditar">Agregar</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4  paddtop25">
+								<div class="boxgangares sinborde">
+									<div class="cajaDetalleTot">
+										<div class="titconfcompra">Tarjetas de credito</div>
+										Administra tus tarjetas.
+										<div class="coenntbotonenes">
+											<a href="#" class="btn-ganga-red rounded btnEditar" data-toggle="modal" data-target="#modalnuevatarj">Agregar nueva tarjeta</a>
+										</div>
+									</div>
+								</div>
+								<div class="boxgangares sinborde">
+									<div class="cajaDetalleTot">
+										<div class="titconfcompra">Facturación</div>
+										Completá tus datos de facturación y agilizá el pago de tu próximo viaje.
+										<div class="coenntbotonenes">
+											<a href="#" class="btn-ganga-red rounded btnEditar">Agregar</a>
+										</div>
+									</div>
+								</div>
+								<div class="boxgangares sinborde">
+									<div class="cajaDetalleTot">
+										<div class="titconfcompra">Pasajeros</div>
+										Completá tus datos y de quienes suelen acompañarte en tus viajes para agilizar tus próximas compras.
+										<div class="coenntbotonenes">
+											<a href="#" class="btn-ganga-red rounded btnEditar">Agregar</a>
+										</div>
+									</div>
+								</div>
+								<div class="boxgangares sinborde">
+									<div class="cajaDetalleTot">
+										<div class="titconfcompra">Notificaciones</div>
+										Debés tener un teléfono verificado con WhatsApp para usar esta funcionalidad.
+										<div class="coenntbotonenes">
+											<div class="selectotrGanga invert"></div>
+										</div>
+									</div>
+								</div>
+								<div class="boxgangares sinborde">
+									<div class="cajaDetalleTot">
+										<div class="titconfcompra">Sesiones activas</div>
+										Gestioná tus sesiones activas en diferentes dispositivos
+										<div class="coenntbotonenes">
+											Chrome - Mac OS X<br>
+											Último acceso - 28 nov. 2019
+										</div>
+									</div>
+								</div>
+								<div class="boxgangares sinborde">
+									<div class="cajaDetalleTot">
+										<div class="titconfcompra">Privacidad y seguridad</div>
+										<div class="coenntbotonenes">
+											Emails y alertas<br>
+											Elegí qué tipo de emails y alertas querés recibir.
+										</div>
+										<div class="coenntbotonenes">
+											Eliminar mi cuenta<br>
+											Una vez eliminada tu cuenta no podrás recuperarla.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_noticias">				
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_conserje"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Noticias</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<img src="assets/images/imgNoticias.jpg">
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_notificaciones">				
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_home"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Notificaciones</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="notificacionescont">
+						<div class="row notificacioncont">
+							<div class="col-xs-2">
+								<i class="gangaicons-information-circle"></i>
+							</div>
+							<div class="col-xs-10">
+								<div class="titulonoti">Esta es una prueba de notificación. Probando multiples líneas</div>
+								<div class="horanoti">01/05/2020 15:06</div>
+							</div>
+						</div>
+						<div class="row notificacioncont">
+							<div class="col-xs-2">
+								<i class="gangaicons-information-circle"></i>
+							</div>
+							<div class="col-xs-10">
+								<div class="titulonoti">Testtttt</div>
+								<div class="horanoti">28/04/2020 19:42</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_login">				
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_home"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Login</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="row">
+						<div class="boxlogin">
+							<div class="titLogin">Bienvenido a Ganga Hoteles</div>
+							<div class="txtLogin">ES LO QUE TIENE QUE SER Y ES LOW COST.</div>
+							<div class="boxbotoneslogin">
+								<a href="#" id="btnLoginFB" class="btnLogines"><i class="fab fa-facebook-f"></i> INGRESAR CON FACEBOOK</a>
+								<a href="#" id="btnLoginGoogle" class="btnLogines"><i class="fab fa-google"></i> INGRESAR CON GOOGLE</a>
+								<a href="#" id="btnIngresarMail" class="btnLogines linkcomun" data-link="pantalla_login_email"><i class="fa fa-envelope"></i> INGRESAR CON TU EMAIL</a>
+								<a href="#" id="btnRegistrate" class="btnLogines linkcomun" data-link="pantalla_registro">REGISTRATE</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_login_email">				
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_login"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Login</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="row">
+						<div class="boxlogin" id="pantalla1">
+							<div class="titLogin">Ingresá a tu cuenta</div>
+							<div class="txtLogin">Te deseamos una feliz estadía en nuestra app</div>
+							<form method="POST" action="" class="formularioLogin">
+								<div class="form-group">
+									<label for="emaillogin">Email</label>
+									<input type="text" name="emaillogin" id="emaillogin" class="form-control">
+								</div>
+								<div class="form-group">
+									<label for="passlogin">Contraseña</label>
+									<input type="password" name="passlogin" id="passlogin" class="form-control">
+								</div>
+								<div class="form-group">
+									<button class="btnGangaBig top45" id="btnLoginP">Ingresar</button>
+								</div>
+							</form>
+							<div class="linksaccioneslog">
+								<a href="#" class="linklogin linkcomun" data-link="pantalla_recpass" id="btnRecuperarPass">Recuperar contraseña</a>
+								<a href="#" class="linklogin linkcomun" data-link="pantalla_registro" id="btnRegistro">Registrarse</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_registro">				
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_login"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Registro</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="row">
+						<div class="boxlogin" id="pantalla2">
+							<div class="titLogin">Creá tu cuenta</div>
+							<div class="txtLogin">Te deseamos una feliz estadía en nuestra app</div>
+							<form method="POST" action="" class="formularioLogin" id="regForm">
+								<div class="form-group">
+									<label for="nombrereg">Nombre</label>
+									<input type="text" name="nombrereg" id="nombrereg" class="form-control">
+								</div>
+								<div class="form-group">
+									<label for="apellidoreg">Apellido</label>
+									<input type="text" name="apellidoreg" id="apellidoreg" class="form-control">
+								</div>
+								<div class="form-group">
+									<label for="emailreg">Email</label>
+									<input type="text" name="emailreg" id="emailreg" class="form-control">
+								</div>
+								<div class="form-group">
+									<label for="passreg">Contraseña</label>
+									<input type="password" name="passreg" id="passreg" class="form-control">
+								</div>
+								<div class="form-group">
+									<label for="passreg2">Reingresar Contraseña</label>
+									<input type="password" name="passreg2" id="passreg2" class="form-control">
+								</div>
+								<div class="form-group">
+									<button class="btnGangaBig top45" id="btnRegisP">Continuar</button>
+								</div>
+							</form>
+							<div class="linksaccioneslog">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_recpass">				
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_login_email"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Recuperar contraseña</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="row">
+						<div class="boxlogin" id="pantalla3">
+							<div class="titLogin">Recuperar contraseña</div>
+							<div class="txtLogin">Ingresa tu email y te enviaremos las instrucciones para que puedas recuperar tu contraseña.</div>
+							<form method="POST" action="" class="formularioLogin">
+								<div class="form-group">
+									<label for="emailrecupera">Email</label>
+									<input type="text" name="emailrecupera" id="emailrecupera" class="form-control">
+								</div>
+								<div class="form-group">
+									<button class="btnGangaBig top45" id="btnRecuperarPassP">Recuperar contraseña</button>
+								</div>
+							</form>
+							<div class="linksaccioneslog">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_alarmas">	
+				<div class="bototnerasapp">
+					<a href="#" class="btnBotonera" data-link="pantalla_home"><i class="gangaicons-house"></i> Home</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_descubri"><i class="gangaicons-binocular"></i> Descubrí</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_favoritos"><i class="gangaicons-love-it"></i>Favoritos</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_perfil"><i class="gangaicons-perfil"></i>Perfil</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_conserje"><i class="gangaicons-consierge"></i>Conserje</a>
+				</div>			
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_home"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Alarmas</div>
+										<a href="#" class="linktopvolver righttt" data-link="pantalla_addAlarma"><i class="gangaicons-add"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="row">
+						<div class="alarmaContent">
+							<div class="col-xs-2">
+								<i class="gangaicons-checkInOut"></i>
+							</div>
+							<div class="col-xs-7">
+								<div class="horaAlarma">9:00 am</div>
+								<div class="tituloAlarma">Check Out</div>
+							</div>
+							<div class="col-xs-3">
+								<div class="selectotrGanga"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="alarmaContent inactiva">
+							<div class="col-xs-2">
+								<i class="gangaicons-checkInOut"></i>
+							</div>
+							<div class="col-xs-7">
+								<div class="horaAlarma">9:00 am</div>
+								<div class="tituloAlarma">Late Check Out</div>
+							</div>
+							<div class="col-xs-3">
+								<div class="selectotrGanga"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 text-center subtituloventana">
+							OTRAS ALARMAS
+						</div>
+					</div>
+					<div class="row">
+						<div class="alarmaContent">
+							<div class="col-xs-2">
+								<i class="gangaicons-trash"></i>
+							</div>
+							<div class="col-xs-7">
+								<div class="horaAlarma">8:00 am</div>
+								<div class="tituloAlarma">Despertador Lu, Ma, Mi, Ju</div>
+							</div>
+							<div class="col-xs-3">
+								<div class="selectotrGanga"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="alarmaContent">
+							<div class="col-xs-2">
+								<i class="gangaicons-trash"></i>
+							</div>
+							<div class="col-xs-7">
+								<div class="horaAlarma">9:00 am</div>
+								<div class="tituloAlarma">Desayuno Lu, Ma, Mi, Ju</div>
+							</div>
+							<div class="col-xs-3">
+								<div class="selectotrGanga"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_addAlarma">
+				<div class="bototnerasapp">
+					<a href="#" class="btnBotonera" data-link="pantalla_home"><i class="gangaicons-house"></i> Home</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_descubri"><i class="gangaicons-binocular"></i> Descubrí</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_favoritos"><i class="gangaicons-love-it"></i>Favoritos</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_perfil"><i class="gangaicons-perfil"></i>Perfil</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_conserje"><i class="gangaicons-consierge"></i>Conserje</a>
+				</div>			
+				<div class="container">
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_alarmas"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Alarmas</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="row">
+						<div class="col-md-12 text-center subtituloventana">
+							CREAR ALARMA
+						</div>
+						<div class="col-md-12">
+							<div class="tituloForm">Seleccione fecha y hora</div>
+							<input type="text" class="form-control" id="nuevalarma">
+						</div>
+						<div class="col-xs-6 text-center">
+							<a href="#" class="btnRedGangaBig linkcomun" data-link="pantalla_alarmas" id="btnGuardarAlarma">GUARDAR</a>
+						</div>											
+						<div class="col-xs-6 text-center">												
+							<a href="#" class="btnRedGangaBigInv linkcomun" data-link="pantalla_alarmas">CANCELAR</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ventana" id="pantalla_conserje">	
+				<div class="bototnerasapp">
+					<a href="#" class="btnBotonera" data-link="pantalla_home"><i class="gangaicons-house"></i> Home</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_descubri"><i class="gangaicons-binocular"></i> Descubrí</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_favoritos"><i class="gangaicons-love-it"></i>Favoritos</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_perfil"><i class="gangaicons-perfil"></i>Perfil</a>
+					<a href="#" class="btnBotonera" data-link="pantalla_conserje"><i class="gangaicons-consierge"></i>Conserje</a>
+				</div>			
+				<div class="container" style="height: inherit;">
+<!--
+					<header class="row interna" style="background: #ff4d4d;">
+-->
+					<header class="row interna">
+						<div class="col-md-12">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-12">
+										<a href="#" class="linktopvolver" data-link="pantalla_home"><i class="gangaicons-arrow-left"></i></a>
+										<div class="tituloventana">Conserje</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+<!--
+					<img src="assets/images/Menu-Conserje.jpg" style="margin-left: -15px;">
+-->
+					<div class="consieg_botoneracont">
+						<div class="consieg_botoneracontIn">
+							<table class="consieg_botonera">
+								<tr>
+									<td><a href="#" class="btnConsiergeMenu"><i class="gangaicons-hotel"></i> Información</a></td>
+									<td class="costados"><a href="#" class="btnConsiergeMenu"><i class="gangaicons-chat2"></i> Chat</a></td>
+									<td><a href="#" class="btnConsiergeMenu"><i class="gangaicons-checkInOut"></i> Check in/out</a></td>
+								</tr>
+								<tr>
+									<td class="aribaabajo"><a href="#" class="btnConsiergeMenu"><i class="gangaicons-servicios"></i> Servicios</a></td>
+									<td class="todo"><a href="#" class="btnConsiergeMenu"><i class="gangaicons-mundocartel"></i> Experiencias</a></td>
+									<td class="aribaabajo"><a href="#" class="btnConsiergeMenu"><i class="gangaicons-rentalcar"></i> Rental Car</a></td>
+								</tr>
+								<tr>
+									<td><a href="#" class="btnConsiergeMenu"><i class="gangaicons-bus"></i> Translados</a></td>
+									<td class="costados"><a href="#" class="btnConsiergeMenu" data-link="pantalla_noticias"><i class="gangaicons-noticias"></i> Noticias</a></td>
+									<td><a href="#" class="btnConsiergeMenu" data-link="pantalla_alarmas"><i class="gangaicons-alarm-ring"></i> Alarmas</a></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="modalError">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="modalErrorTitle">Error</h4>
+					</div>
+					<div class="modal-body" id="modalErrorText">
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<script type="text/javascript" src="cordova.js"></script>
+		<script src="assets/js/jquery-1.12.4.js"></script>
+<!--
+		<script src="//apis.google.com/js/platform.js"></script>
+-->
+		<script src="assets/js/vendor/bootstrap.min.js"></script>
+		<script src="assets/js/jquery-ui.js?v=1865700885"></script>
+		<script type="text/javascript" src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/jquery.disableAutoFill.min.js"></script>
+		<script src="assets/moment/min/moment.min.js"></script>
+		<script src="assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+		<script src="assets/js/owl.carousel.js"></script>
+		<script src="assets/js/jquery.touchSwipe.min.js"></script>
+		<script src="assets/js/appfunc.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script type="text/javascript">
+			app.initialize();
+		</script>
+	</body>
+</html>

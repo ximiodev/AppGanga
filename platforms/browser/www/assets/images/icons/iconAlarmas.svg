@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44.811" height="47.75" viewBox="0 0 44.811 47.75">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Interface-Essential__x2F__Alert__x2F__alarm-clock_1_" transform="translate(-0.094 -0.094)">
+    <g id="Group_263_1_">
+      <g id="alarm-clock_1_">
+        <path id="Oval_167_1_" class="cls-1" d="M22.5,43.5a18,18,0,1,0-18-18A18.053,18.053,0,0,0,22.5,43.5Z"/>
+        <path id="Shape_1192_1_" class="cls-1" d="M10.5,46.5,13.3,41"/>
+        <path id="Shape_1193_1_" class="cls-1" d="M22.5,25.5H15.7"/>
+        <path id="Shape_1194_1_" class="cls-1" d="M22.5,15V25.5"/>
+        <path id="Shape_1195_1_" class="cls-1" d="M1.5,7.5,9,1.5"/>
+        <path id="Shape_1196_1_" class="cls-1" d="M34.5,46.5,31.7,41"/>
+        <path id="Shape_1197_1_" class="cls-1" d="M43.5,7.5,36,1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

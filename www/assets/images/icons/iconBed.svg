@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23.1" height="14.25" viewBox="0 0 23.1 14.25">
+  <g id="Hotels-Spas_Hotel_Bedrooms_hotel-bed" data-name="Hotels-Spas / Hotel/Bedrooms / hotel-bed" transform="translate(-182.97 -100.875)">
+    <g id="Group">
+      <g id="hotel-bed">
+        <path id="Shape" d="M183.72,101.625v12.75" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Shape_2" data-name="Shape 2" d="M205.32,105.375v9" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Shape_3" data-name="Shape 3" d="M205.32,110.625h-21.6" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Oval" d="M188.76,107.625a2.252,2.252,0,1,0-2.16-2.25A2.206,2.206,0,0,0,188.76,107.625Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Shape_4" data-name="Shape 4" d="M193.8,107.625v-3.539a.76.76,0,0,1,.277-.591.7.7,0,0,1,.618-.137l5.649,1.471a2.864,2.864,0,0,1,2.1,2.8Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>
